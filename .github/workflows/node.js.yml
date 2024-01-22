@@ -1,0 +1,70 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 21.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: ./backend/package-lock.json
+
+      - name: Install Backend dependencies
+        run: npm ci
+        working-directory: ./backend
+
+      - name: Build Backend (if applicable)
+        run: npm run build --if-present
+        working-directory: ./backend
+
+      - name: Test Backend
+        run: npm test
+        working-directory: ./backend
+
+  frontend:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 21.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: ./frontend/package-lock.json
+
+      - name: Install Frontend dependencies
+        run: npm ci
+        working-directory: ./frontend
+
+      - name: Build Frontend (if applicable)
+        run: npm run build --if-present
+        working-directory: ./frontend
+
+      - name: Test Frontend
+        run: npm test
+        working-directory: ./frontend
