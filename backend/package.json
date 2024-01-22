@@ -1,15 +1,14 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js",
-    "test": "echo backend test"
-  },
-  "dependencies": {
-    "express": "^4.18.2"
+    "test": "echo \"Error: no test specified\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
