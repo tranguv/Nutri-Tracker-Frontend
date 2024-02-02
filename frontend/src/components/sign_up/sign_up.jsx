@@ -10,47 +10,67 @@ import {
     Input,
     VStack,
     Image,
-    Checkbox,
+    Checkbox,Select
   } from '@chakra-ui/react';
-  import planet from './../../assets/planet.png';
   
-  function SignIn() {
+  import './sign_up.css'
+  function SignUp() {
     return (
-      <Container maxW="3xl">
-        <Grid templateColumns="repeat(5, 1fr)" gap={6} sx={{ fontFamily: 'Arial, sans-serif' }}>
-        <GridItem colSpan={1} position="relative" bg="blue.700">
-            <Image
-              src={planet}
-              position="absolute"
-              right="-90%"
-              bottom="5%"
-              transform="translate(-50%, -50%) scale(2)"
-            />
+      <Container maxW="3xl" >
+        <Grid templateColumns="repeat(5, 1fr)"  sx={{ fontFamily: 'Arial, sans-serif' }}>
+        <GridItem colSpan={1} position="relative" bg="blue.700"borderRadius="lg">
+            
           </GridItem>
-          <GridItem colSpan={3}>
-            <Container maxW="md">
-              <Box padding="4" bg="gray.100" maxW="md" borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+          <GridItem colSpan={4}>
+            <Container maxW="100vh">
+              <Box padding="4" bg="" maxW="lg" borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
                 <form>
-                <VStack spacing="6" alignItems="center">
-                  <h1 style={{ fontWeight: 'bold' }}>Sign In</h1>
-                  <FormControl id="email">
-                    <FormLabel>Email address</FormLabel>
-                    <Input type="email" sx={{ borderColor: 'gray.300' }} />
-                  </FormControl>
-                  <FormControl id="password">
-                    <FormLabel>Password</FormLabel>
-                    <Input type="password" sx={{ borderColor: 'gray.300' }} />
-                  </FormControl>
-                  <HStack justify="space-between">
-                    <Checkbox defaultChecked>Remember me</Checkbox>
-                    <Button variant="text" size="sm">
-                      Forgot password?
-                    </Button>
-                  </HStack>
-                  <Button colorScheme="teal" type="submit">
-                    Sign In
-                  </Button>
-                </VStack>
+                    <HStack spacing='20px'>
+                        <Box w='400px'>
+                            <VStack spacing="4">
+                                <FormControl >
+                                    <FormLabel>First Name</FormLabel>
+                                    <Input type="text" placeholder='Enter First Name'/>
+                                </FormControl>
+                                <FormControl >
+                                    <FormLabel>Last Name</FormLabel>
+                                    <Input type="text" placeholder='Enter Last Name'/>
+                                </FormControl>
+                                <FormControl >
+                                    <FormLabel>Email address / User name</FormLabel>
+                                    <Input type="email" placeholder='e.g: frisbee@gmail.com'/>
+                                </FormControl>
+                                <FormControl >
+                                    <FormLabel>Email address</FormLabel>
+                                    <Input type="text"placeholder='e.g: Qj123!f:f' />
+                                </FormControl>
+                            </VStack>
+                        </Box>
+                        <Box>
+                        <VStack spacing="4">
+                            <FormControl >
+                                <FormLabel>Date Of Birth</FormLabel>
+                                <Input type="date" />
+                            </FormControl>
+                            <FormControl >
+                                <FormLabel>Weight (kg)</FormLabel>
+                                <Input type="number" />
+                            </FormControl>
+                            <FormControl >
+                                <FormLabel>Height (cm)</FormLabel>
+                                <Input type="number" />
+                            </FormControl>
+                            <FormControl >
+                                <FormLabel>Gender</FormLabel>
+                                <Select placeholder='Select gender' size='md' value=''>
+                                    <option value='male'>Male</option>
+                                    <option value='female'>Female</option>
+                                    <option value='other'>Other</option>
+                                </Select>
+                            </FormControl>
+                        </VStack>
+                    </Box>
+                    </HStack>
                 </form>
               </Box>
             </Container>
@@ -61,5 +81,5 @@ import {
     );
   }
   
-  export default <SignUp></SignUp>;
+  export default SignUp;
   
