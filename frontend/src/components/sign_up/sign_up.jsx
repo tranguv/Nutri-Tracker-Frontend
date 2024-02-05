@@ -9,73 +9,89 @@ import {
     GridItem,
     Input,
     VStack,
-    Image,
-    Checkbox,Select
+    Select
   } from '@chakra-ui/react';
+  import { useFormik, Form, Field, Formik } from 'formik';
+  import './sign_up.css';
+import { useState } from 'react';
   
-  import './sign_up.css'
+  const FormField = ({ label, type, placeholder, onChange, value, name }) => (
+    <FormControl>
+      <FormLabel>{label}</FormLabel>
+      <Input type={type} placeholder={placeholder} onChange={onChange} value={value} name={name} />
+    </FormControl>
+  );
+  
+  
   function SignUp() {
+    const formik = useFormik({
+        initialValues: {
+        firstname: '',
+        lastname: '',
+        email: '',
+        password: '',
+        dob: '',
+        weight: '',
+        height: '',
+        gender: ''
+      },
+      onSubmit: values => {
+        alert(JSON.stringify(values, null, 2));
+      },
+    });
+    const [toggle, setToggle] = useState("False");
+    const handleClick = () => {
+        setToggle(!toggle);
+    }
     return (
-      <Container maxW="3xl" >
-        <Grid templateColumns="repeat(5, 1fr)"  sx={{ fontFamily: 'Arial, sans-serif' }}>
-        <GridItem colSpan={1} position="relative" bg="blue.700"borderRadius="lg">
-            
-          </GridItem>
-          <GridItem colSpan={4}>
+      <Container maxW="3xl">
+        <Grid templateColumns="repeat(5, 1fr)" sx={{ fontFamily: 'Arial, sans-serif' }}>
+          <GridItem colSpan={toggle? 0: 0} position="relative" bg="blue.700" borderRadius="lg"></GridItem>
+          <GridItem colSpan={toggle? 5 : 4}>
             <Container maxW="100vh">
               <Box padding="4" bg="" maxW="lg" borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-                <form>
-                    <HStack spacing='20px'>
-                        <Box w='400px'>
-                            <VStack spacing="4">
-                                <FormControl >
-                                    <FormLabel>First Name</FormLabel>
-                                    <Input type="text" placeholder='Enter First Name'/>
-                                </FormControl>
-                                <FormControl >
-                                    <FormLabel>Last Name</FormLabel>
-                                    <Input type="text" placeholder='Enter Last Name'/>
-                                </FormControl>
-                                <FormControl >
-                                    <FormLabel>Email address / User name</FormLabel>
-                                    <Input type="email" placeholder='e.g: frisbee@gmail.com'/>
-                                </FormControl>
-                                <FormControl >
-                                    <FormLabel>Email address</FormLabel>
-                                    <Input type="text"placeholder='e.g: Qj123!f:f' />
-                                </FormControl>
-                            </VStack>
+              <button onClick={handleClick}>Toggle</button>
+                <Formik>
+                
+                    <Form onSubmit={formik.handleSubmit}>
+                       
+                        <HStack spacing="8" justify="center">
+                            <Box maxW="70%">
+                                <VStack spacing="4"  align="stretch">
+                                    <FormField label="First Name" type="text" placeholder="First Name" onChange={formik.handleChange} value={formik.values.firstname} name="firstname" />
+                                    <FormField label="Last Name" type="text" placeholder="Last Name" onChange={formik.handleChange} value={formik.values.lastname} name="lastname" />
+                                    <FormField label="Email" type="email" placeholder="Email" onChange={formik.handleChange} value={formik.values.email} name="email" />
+                                    <FormField label="Password" type="password" placeholder="Password" onChange={formik.handleChange} value={formik.values.password} name="password" />
+                                </VStack>
+                            </Box>
+                            <Box maxW="30%">
+                                <VStack spacing="3"  align="stretch">
+                                    <FormField label="Date of Birth" type="date" placeholder="Date of Birth" onChange={formik.handleChange} value={formik.values.dob} name="dob" />
+                                    <FormField label="Weight" type="number" placeholder="Weight" onChange={formik.handleChange} value={formik.values.weight} name="weight" />
+                                    <FormField label="Height" type="number" placeholder="Height" onChange={formik.handleChange} value={formik.values.height} name="height" />
+                                    <FormLabel>Gender</FormLabel>
+                                    <Select placeholder='Select option' value={formik.values.gender} name='gender' onChange={formik.handleChange}>
+                                        <option value='option1'>Option 1</option>
+                                        <option value='option2'>Option 2</option>
+                                        <option value='option3'>Option 3</option>
+                                    </Select>
+                                </VStack>
+                            </Box>
+                            
+                        </HStack>
+                        <Box margin="30px">
+                            <button type="submit"><Box padding="4" bg="" maxW="lg" borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+                            
+                            Submit</Box></button>
+                        
                         </Box>
-                        <Box>
-                        <VStack spacing="4">
-                            <FormControl >
-                                <FormLabel>Date Of Birth</FormLabel>
-                                <Input type="date" />
-                            </FormControl>
-                            <FormControl >
-                                <FormLabel>Weight (kg)</FormLabel>
-                                <Input type="number" />
-                            </FormControl>
-                            <FormControl >
-                                <FormLabel>Height (cm)</FormLabel>
-                                <Input type="number" />
-                            </FormControl>
-                            <FormControl >
-                                <FormLabel>Gender</FormLabel>
-                                <Select placeholder='Select gender' size='md' value=''>
-                                    <option value='male'>Male</option>
-                                    <option value='female'>Female</option>
-                                    <option value='other'>Other</option>
-                                </Select>
-                            </FormControl>
-                        </VStack>
-                    </Box>
-                    </HStack>
-                </form>
+                        
+                    </Form>
+                </Formik>
+                
               </Box>
             </Container>
           </GridItem>
-          
         </Grid>
       </Container>
     );
