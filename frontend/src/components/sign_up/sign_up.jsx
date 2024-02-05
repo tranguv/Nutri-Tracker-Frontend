@@ -9,11 +9,15 @@ import {
     GridItem,
     Input,
     VStack,
-    Select
+    Select, Image,useBreakpointValue
   } from '@chakra-ui/react';
   import { useFormik, Form, Field, Formik } from 'formik';
-  import './sign_up.module.css';
-import { useState } from 'react';
+  import './sign_up.css';
+  import planet from './../../assets/planet.png';
+  import arrow from './../../assets/next.png';
+ 
+
+  import { useState } from 'react';
   
   const FormField = ({ label, type, placeholder, onChange, value, name }) => (
     <FormControl>
@@ -39,18 +43,35 @@ import { useState } from 'react';
         alert(JSON.stringify(values, null, 2));
       },
     });
-    const [toggle, setToggle] = useState("False");
+    const [toggle, setToggle] = useState(false);
     const handleClick = () => {
         setToggle(!toggle);
     }
+    
     return (
-      <Container maxW="3xl">
-        <Grid templateColumns="repeat(5, 1fr)" sx={{ fontFamily: 'Arial, sans-serif' }}>
-          <GridItem colSpan={toggle? 0: 0} position="relative" bg="blue.700" borderRadius="lg"></GridItem>
-          <GridItem colSpan={toggle? 5 : 4}>
+      
+        <Grid templateColumns="repeat(5, 1fr)" sx={{ fontFamily: 'Arial, sans-serif', width: '100%', height: '100vh'}}>
+          {toggle && 
+          <GridItem colSpan={1} position="relative" bg="blue.700" borderRadius="lg">
+          <Image
+          src={planet}
+          position='absolute'
+          right='-90%'
+          bottom='5%'
+          transform='translate(-50%, -50%) scale(2)'
+        />
+        </GridItem>}
+          <GridItem colSpan={toggle? 4: 5}  display="flex" justifyContent="center" alignItems="center">
             <Container maxW="100vh">
-              <Box padding="4" bg="" maxW="lg" borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-              <button onClick={handleClick}>Toggle</button>
+              <Box padding="4" bg="" maxW={toggle ? '2xl' : 'full'} borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+              <Button className='raised' onClick={handleClick} mb="4" position="relative" borderRadius="full">
+                {toggle ? (
+                  <Image src={arrow} position='absolute' transform='rotate(0deg)' fit="cover" />
+                ) : (
+                  <Image src={arrow} position='absolute' transform='rotate(180deg)' fit="cover" />
+                )}
+              </Button>
+              
                 <Formik>
                 
                     <Form onSubmit={formik.handleSubmit}>
@@ -79,11 +100,11 @@ import { useState } from 'react';
                             </Box>
                             
                         </HStack>
-                        <Box margin="30px">
-                            <button type="submit"><Box padding="4" bg="" maxW="lg" borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-                            
-                            Submit</Box></button>
-                        
+                        <Box margin="30px" display="flex" justifyContent="center" alignItems="center">
+                          <Button className="raised"type="submit" size='md' style={{ border: 'none', background: 'none', padding: '10px' }}>
+                              Submit
+
+                          </Button>
                         </Box>
                         
                     </Form>
@@ -93,7 +114,7 @@ import { useState } from 'react';
             </Container>
           </GridItem>
         </Grid>
-      </Container>
+      
     );
   }
   
