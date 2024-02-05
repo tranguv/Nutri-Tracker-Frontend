@@ -12,7 +12,7 @@ import {
     Select
   } from '@chakra-ui/react';
   import { useFormik, Form, Field, Formik } from 'formik';
-  import './sign_up.css';
+  import './sign_up.module.css';
 import { useState } from 'react';
   
   const FormField = ({ label, type, placeholder, onChange, value, name }) => (
