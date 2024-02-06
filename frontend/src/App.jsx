@@ -8,8 +8,8 @@ function App() {
   
   return (
     <ChakraProvider>
-      <AuthForm children={<SignIn/>} />
-      <AuthForm children={<SignUp/>}/>
+      <AuthForm  />
+      <AuthForm />
     </ChakraProvider>
   )
 }
