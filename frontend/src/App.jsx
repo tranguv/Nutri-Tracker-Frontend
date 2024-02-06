@@ -1,16 +1,31 @@
-// App.jsx
-import React from 'react';
-import Navbar from './Navbar';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { navigation } from './router/navigation';
+
+// css
+import './App.css';
 
 function App() {
   return (
-    <div className="app-container">
-      <Navbar />
-      <main className="main-content">
-        {/* Your main app content goes here */}
-        <p>Main App Content</p>
-      </main>
-    </div>
+    <Router>
+      <Routes>
+        {navigation.map((route, index) => {
+          const { path, component: Component, isPrivate, noLayoutWrap } = route;
+
+          const element = Component;
+          // noLayoutWrap ? (  // cmt tam khi nao co side bar bo vo
+          //   <Component />
+          // ) : (
+          //   <LayoutWrapper>
+          //     <Component />
+          //   </LayoutWrapper>
+          // );
+
+          return <Route key={index} path={path} element={element} />;
+        })}
+      </Routes>
+    </Router>
+
   );
 }
 
