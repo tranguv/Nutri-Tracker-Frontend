@@ -1,0 +1,58 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    flex-direction: column; /* Display items vertically */
+    width: 195px; /* Adjust the width as needed */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #125174; /* Adjust background color as needed */
+    padding: 10px;
+    box-sizing: border-box;
+
+    border-top-right-radius: 10px; /* Round the top-right corner */
+    border-bottom-right-radius: 10px; /* Round the bottom-right corner */
+  }
+  
+  ul {
+    list-style-type: auto;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 12px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block; /* Change inline to block to make the entire link clickable */
+    padding: 10px; /* Add padding to create a clickable area */
+    border-radius: 5px; /* Add rounded corners for a button-like appearance */
+    transition: background-color 0.3s; /* Smooth transition for the background color change */
+  }
+  
+  a:hover {
+    background-color: #7BC8EE; /* Change the background color on hover */
+  }
+  
+  .logout-button {
+    margin-top: auto; /* Push the logout button to the bottom */
+  }
+  
+  .logout-button a {
+    background-color: rgb(255, 255, 255); /* Example background color for the logout button */
+    padding: 20px;
+    border-radius: 20px; /* Add rounded corners for a button-like appearance */
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button a:hover {
+    background-color: rgb(255, 255, 255); /* Change the background color on hover */
+  }
+  
+  
