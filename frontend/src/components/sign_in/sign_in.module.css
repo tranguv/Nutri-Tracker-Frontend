@@ -1,0 +1,23 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+}
+
+input {
+  border: 2px solid grey;
+}
+
+.Box {
+  padding: 4px;
+  background-color: blue;
+  color: black;
+  max-width: 100%;
+}

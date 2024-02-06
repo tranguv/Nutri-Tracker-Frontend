@@ -1,0 +1,19 @@
+.customButton {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input1 {
+  size: 'lg';
+}
+.raised{
+  box-shadow: 0 1px 3px;
+  transition: 0.3 ease, transform 0.3s ease;
+}
+.raised:hover{
+  box-shadow: 0 1px 5px;
+  transform: scale(1.05);
+}
