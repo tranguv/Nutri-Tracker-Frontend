@@ -13,23 +13,26 @@
   }
   
   ul {
-    list-style-type: auto;
+    list-style-type: none;
     padding: 0;
     margin: 0;
   }
   
   li {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    width: 180px;
   }
   
   a {
     text-decoration: none;
+    font-family: 'Hermeneus One';
     color: white;
     font-weight: bold;
-    display: block; /* Change inline to block to make the entire link clickable */
-    padding: 10px; /* Add padding to create a clickable area */
+    display: flex; /* Change inline to block to make the entire link clickable */
+    padding: 15px; /* Add padding tos create a clickable area */
     border-radius: 5px; /* Add rounded corners for a button-like appearance */
-    transition: background-color 0.3s; /* Smooth transition for the background color change */
+    transition: background-color 0.3s;
   }
   
   a:hover {
@@ -38,11 +41,14 @@
   
   .logout-button {
     margin-top: auto; /* Push the logout button to the bottom */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
   }
   
-  .logout-button a {
+  .logout-button  {
     background-color: rgb(255, 255, 255); /* Example background color for the logout button */
-    padding: 20px;
+    padding: 10px 50px;
     border-radius: 20px; /* Add rounded corners for a button-like appearance */
     display: block;
     color: rgb(0, 0, 0);
@@ -51,7 +57,7 @@
     transition: background-color 0.3s;
   }
   
-  .logout-button a:hover {
+  .logout-button :hover {
     background-color: rgb(255, 255, 255); /* Change the background color on hover */
   }
   

@@ -1,32 +1,16 @@
+import Navbar from "./components/Navbar-stuffs/Navbar";
+import AuthForm from "./components/Main-Template/main-template"
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { navigation } from './router/navigation';
-
-// css
-import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        {navigation.map((route, index) => {
-          const { path, component: Component, isPrivate, noLayoutWrap } = route;
-
-          const element = Component;
-          // noLayoutWrap ? (  // cmt tam khi nao co side bar bo vo
-          //   <Component />
-          // ) : (
-          //   <LayoutWrapper>
-          //     <Component />
-          //   </LayoutWrapper>
-          // );
-
-          return <Route key={index} path={path} element={element} />;
-        })}
-      </Routes>
-    </Router>
-
-  );
+    <div className="app-container">
+      <Navbar />
+      <main className="main-content">
+        {/* Your main app content goes here */}
+      </main>
+    </div>
+  )
 }
 
 export default App;
