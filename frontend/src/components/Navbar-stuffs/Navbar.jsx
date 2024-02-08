@@ -1,18 +1,32 @@
-// Navbar.jsx
-import React from 'react';
-import './Navbar.css'; // Import your CSS file for styling
+import React, { useState } from 'react';
+import './.modules.css'; // Import your CSS file for styling
 import { Box } from '@chakra-ui/react';
-
-
+import { AiFillDatabase } from "react-icons/ai";
 
 export default function Navbar() {
+  const [isSidebarCollapsed, setSidebarCollapsed] = useState(false);
+
+  const handleIconClick = () => {
+    setSidebarCollapsed(!isSidebarCollapsed);
+  };
+
   return (
-    <nav className="navbar" style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-      <div>
-        <img alt="Logo" className="logo"/>
+    
+
+    <nav className={`navbar ${isSidebarCollapsed ? 'collapsed' : ''}`} style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1px' }}>
+        <div>
+          <Box className="icon">
+            <button onClick={handleIconClick}>
+              <a href="/icon">
+                <AiFillDatabase size={20} />
+              </a>
+            </button>
+          </Box>
+        </div>
       </div>
 
-      <div style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
+      <div className="content" style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
         <ul>
           <li>
             <a href="/">HOME</a>
@@ -42,3 +56,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+

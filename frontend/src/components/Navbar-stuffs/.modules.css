@@ -1,4 +1,4 @@
-/* Navbar.css */
+
 .navbar {
     display: flex;
     flex-direction: column; /* Display items vertically */
@@ -8,10 +8,16 @@
     padding: 10px;
     box-sizing: border-box;
 
+    transition: transform 0.3s ease;
+
     border-top-right-radius: 10px; /* Round the top-right corner */
     border-bottom-right-radius: 10px; /* Round the bottom-right corner */
   }
+  .collapsed {
+    transform: translateX(-100%); /* or whatever width you want when collapsed */
+  }
   
+
   ul {
     list-style-type: none;
     padding: 0;
@@ -60,5 +66,10 @@
   .logout-button :hover {
     background-color: rgb(255, 255, 255); /* Change the background color on hover */
   }
-  
+
+  .icon {
+    background-color: rgb(255, 255, 255); /* Example background color for the logout button */
+    border-radius: 10px; /* Add rounded corners for a button-like appearance */
+    margin-left: 120px;
+  }
   

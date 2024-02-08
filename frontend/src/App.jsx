@@ -5,7 +5,7 @@ import AuthForm from "./components/Main-Template/main-template"
 function App() {
   return (
     <div className="app-container">
-      <Navbar />
+      <Navbar/>
       <main className="main-content">
         {/* Your main app content goes here */}
       </main>
