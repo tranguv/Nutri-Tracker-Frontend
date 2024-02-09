@@ -1,26 +1,25 @@
+import React from 'react';
+import Navbar from "./components/Navbar-stuffs/Navbar";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { navigation } from './router/navigation';
-
-// css
-import './App.css';
+import SideBarWrapper from './components/Main-Template/SideBarWrapper';
 
 function App() {
   return (
     <Router>
       <Routes>
         {navigation.map((route, index) => {
-          const { path, component: Component, isPrivate, noLayoutWrap } = route;
+          const { path, component, isPrivate, noSideBar } = route;
 
-          const element = Component;
-          // noLayoutWrap ? (  // cmt tam khi nao co side bar bo vo
-          //   <Component />
-          // ) : (
-          //   <LayoutWrapper>
-          //     <Component />
-          //   </LayoutWrapper>
-          // );
+          const RouteComponent = () => noSideBar ? (
+            <>
+              {component}
+            </>
+          ) : (
+            <SideBarWrapper>{component}</SideBarWrapper>
+          );
 
-          return <Route key={index} path={path} element={element} />;
+          return <Route key={index} path={path} element={<RouteComponent />} />;
         })}
       </Routes>
     </Router>
