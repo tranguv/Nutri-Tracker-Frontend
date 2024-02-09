@@ -13,8 +13,9 @@
     border-top-right-radius: 10px; /* Round the top-right corner */
     border-bottom-right-radius: 10px; /* Round the bottom-right corner */
   }
+  
   .collapsed {
-    transform: translateX(-100%); /* or whatever width you want when collapsed */
+    transform: translateX(-62%); /* or whatever width you want when collapsed */
   }
   
 
@@ -71,5 +72,14 @@
     background-color: rgb(255, 255, 255); /* Example background color for the logout button */
     border-radius: 10px; /* Add rounded corners for a button-like appearance */
     margin-left: 120px;
+    position: fixed;
   }
+
+  .hidden {
+    opacity: 0; 
+    pointer-events: none; /* Disable pointer events on hidden element */
+    transition: opacity 0.5s ease; /* Add opacity transition for smooth visibility change */
+  }
+  
+  
   
