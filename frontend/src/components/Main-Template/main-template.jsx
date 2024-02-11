@@ -34,7 +34,7 @@ const AuthForm = ({ navbar, children }) => {
       )}
       <GridItem colSpan={toggle ? 4 : 5} display="flex" justifyContent="center" alignItems="center">
         <Container maxW="100vh">
-          <Box padding="4" bg="" maxW={toggle ? '2xl' : 'full'} borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+          <Box padding="4" bg="" maxW={toggle ? '4xl' : 'full'} borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
             <Button className='raised' onClick={handleClick} mb="4" position="relative" borderRadius="full">
               {toggle ? (
                 <Image src={arrow} position='absolute' transform='rotate(180deg)' fit="cover" />

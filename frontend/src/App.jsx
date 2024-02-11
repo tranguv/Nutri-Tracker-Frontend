@@ -1,29 +1,18 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { navigation } from './router/navigation';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { navigation } from "./router/navigation";
+import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
 // css
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        {navigation.map((route, index) => {
-          const { path, component: Component, isPrivate, noLayoutWrap } = route;
+    <div>
+    <TooltipComponent content="Setting">
+    <h1 className="text-3xl text-blue-500 underline" >App</h1>
 
-          const element = Component;
-          // noLayoutWrap ? (  // cmt tam khi nao co side bar bo vo
-          //   <Component />
-          // ) : (
-          //   <LayoutWrapper>
-          //     <Component />
-          //   </LayoutWrapper>
-          // );
-
-          return <Route key={index} path={path} element={element} />;
-        })}
-      </Routes>
-    </Router>
+    </TooltipComponent>
+    </div>
   );
 }
 
