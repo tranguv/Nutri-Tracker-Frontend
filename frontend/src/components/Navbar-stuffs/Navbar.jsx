@@ -7,46 +7,60 @@ import {
   FaCommentAlt,
   FaShoppingBag,
   FaThList,
+  FaSignOutAlt,
+  FaDelicious,
+  FaRunning,
+  FaGamepad,
+  FaHome,
 } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import './Navbar.modules.css';
+import { color } from 'framer-motion';
 
 const Navbar = ({ children, isSidebarCollapsed, handleIconClick }) => {
   const menuItem = [
     {
-      path: '/',
+      path: '/dashboard',
       name: 'Dashboard',
-      icon: <FaTh />,
+      icon: <FaHome />,
     },
     {
-      path: '/about',
-      name: 'About',
-      icon: <FaUserAlt />,
-    },
-    {
-      path: '/analytics',
-      name: 'Analytics',
+      path: '/reports',
+      name: 'Reports',
       icon: <FaRegChartBar />,
     },
     {
-      path: '/comment',
-      name: 'Comment',
-      icon: <FaCommentAlt />,
+      path: '/logs',
+      name: 'Logs',
+      icon: <FaRunning />,
     },
     {
-      path: '/product',
-      name: 'Product',
-      icon: <FaShoppingBag />,
+      path: '/coinstore',
+      name: 'Coin Store',
+      icon: <FaGamepad />,
     },
     {
-      path: '/productList',
-      name: 'Product List',
-      icon: <FaThList />,
+      path: '/profile',
+      name: 'Profile',
+      icon: <FaUserAlt />,
+    },
+    {
+      path: '/logout',
+      name: 'Log Out',
+      icon: <FaSignOutAlt />,
     },
   ];
   return (
     <div className='container'>
-      <div style={{ width: 'fit-content' }} className='sidebar'>
+      <div
+        style={{
+          width: 'fit-content',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+        className='sidebar'
+      >
         <div className='top_section'>
           <h1
             style={{ display: isSidebarCollapsed ? 'block' : 'none' }}
@@ -61,22 +75,29 @@ const Navbar = ({ children, isSidebarCollapsed, handleIconClick }) => {
             <FaBars onClick={handleIconClick} />
           </div>
         </div>
-        {menuItem.map((item, index) => (
-          <NavLink
-            to={item.path}
-            key={index}
-            className='link'
-            activeclassName='active'
-          >
-            <div className='icon'>{item.icon}</div>
-            <div
-              style={{ display: isSidebarCollapsed ? 'block' : 'none' }}
-              className='link_text'
+        <div>
+          {menuItem.map((item, index) => (
+            <NavLink
+              to={item.path}
+              key={index}
+              className='link'
+              activeclassName='active'
             >
-              {item.name}
-            </div>
-          </NavLink>
-        ))}
+              <div className='icon' style={{ color: 'black' }}>
+                {item.icon}
+              </div>
+              <div
+                style={{
+                  display: isSidebarCollapsed ? 'block' : 'none',
+                  color: 'black',
+                }}
+                className='link_text'
+              >
+                {item.name}
+              </div>
+            </NavLink>
+          ))}
+        </div>
       </div>
       <main>{children}</main>
     </div>
