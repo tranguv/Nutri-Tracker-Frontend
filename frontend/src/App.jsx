@@ -6,9 +6,12 @@ import Sidebar from './components/Navbar-stuffs/Sidebar';
 import SideBarWrapper from './components/Main-Template/SideBarWrapper';
 import { useStateContext } from './contexts/ContextProvider';
 import NavBar from './components/Navbar-stuffs/Navbar';
+import Process from './components/process-component/Process';
+import Dasboard from './pages/Dashboard';
 // css
 import './App.css';
 import { useState } from 'react';
+import Calendar from './pages/Calendar';
 function App() {
   const {isSidebarCollapsed, setSidebarCollapsed} = useStateContext();
   const handleIconClick = () => {
@@ -57,9 +60,10 @@ function App() {
           <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg'>
             <NavBar />
           </div>
-          <div>
+          <div className=''>
             <Routes>
-
+              <Route path='/' element={<Dasboard/>}> </Route>
+              <Route path='/calendar' element={<Calendar/>}></Route>
             </Routes>
           </div>
          </div>

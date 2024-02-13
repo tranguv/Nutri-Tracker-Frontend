@@ -10,6 +10,8 @@ import {
 } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import './Navbar.modules.css';
+import { Tooltip } from '@chakra-ui/react';
+import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 const Sidebar = ({ children, isSidebarCollapsed, handleIconClick }) => {
   const menuItem = [
@@ -68,13 +70,15 @@ const Sidebar = ({ children, isSidebarCollapsed, handleIconClick }) => {
             className='link'
             activeclassName='active'
           >
-            <div className='icon'>{item.icon}</div>
-            <div
-              style={{ display: isSidebarCollapsed ? 'block' : 'none' }}
-              className='link_text'
-            >
-              {item.name}
-            </div>
+            <TooltipComponent content={item.name}> 
+              <div className='icon'>{item.icon}</div>
+              <div
+                style={{ display: isSidebarCollapsed ? 'block' : 'none' }}
+                className='link_text'
+              >
+                {item.name}
+              </div>
+            </TooltipComponent>
           </NavLink>
         ))}
       </div>
