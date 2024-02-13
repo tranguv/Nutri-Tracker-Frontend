@@ -1,85 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
 
-.navbar {
-    display: flex;
-    flex-direction: column; /* Display items vertically */
-    width: 195px; /* Adjust the width as needed */
-    height: 100vh; /* Full height of the viewport */
-    background-color: #125174; /* Adjust background color as needed */
-    padding: 10px;
-    box-sizing: border-box;
+.container {
+  display: flex;
+}
 
-    transition: transform 0.3s ease;
+main {
+  width: 100%;
+  padding: 20px;
+}
 
-    border-top-right-radius: 10px; /* Round the top-right corner */
-    border-bottom-right-radius: 10px; /* Round the bottom-right corner */
-  }
-  
-  .collapsed {
-    transform: translateX(-62%); /* or whatever width you want when collapsed */
-  }
-  
+.sidebar {
+  background:#d5ffc5;
+  color: black;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+}
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-    color: #ffffff;
-    width: 180px;
-  }
-  
-  a {
-    text-decoration: none;
-    font-family: 'Hermeneus One';
-    color: white;
-    font-weight: bold;
-    display: flex; /* Change inline to block to make the entire link clickable */
-    padding: 15px; /* Add padding tos create a clickable area */
-    border-radius: 5px; /* Add rounded corners for a button-like appearance */
-    transition: background-color 0.3s;
-  }
-  
-  a:hover {
-    background-color: #7BC8EE; /* Change the background color on hover */
-  }
-  
-  .logout-button {
-    margin-top: auto; /* Push the logout button to the bottom */
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-  }
-  
-  .logout-button  {
-    background-color: rgb(255, 255, 255); /* Example background color for the logout button */
-    padding: 10px 50px;
-    border-radius: 20px; /* Add rounded corners for a button-like appearance */
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .logout-button :hover {
-    background-color: rgb(255, 255, 255); /* Change the background color on hover */
-  }
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  padding-bottom: 40px;
+}
 
-  .icon {
-    background-color: rgb(255, 255, 255); /* Example background color for the logout button */
-    border-radius: 10px; /* Add rounded corners for a button-like appearance */
-    margin-left: 120px;
-    position: fixed;
-  }
+.logo {
+  font-size: 30px;
+}
 
-  .hidden {
-    opacity: 0; 
-    pointer-events: none; /* Disable pointer events on hidden element */
-    transition: opacity 0.5s ease; /* Add opacity transition for smooth visibility change */
-  }
-  
-  
-  
+.bars {
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+.link {
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+
+.link:hover {
+  background: rgb(75, 165, 116);
+  color: #000;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+
+.sidebar .link:last-child {
+  position: fixed;
+  bottom: 10px;
+}
+
+.active {
+  background: rgb(75, 165, 116);
+  color: #000;
+  border-radius: 10px;
+}
+
+.icon {
+  font-size: 22px;
+}
+
+.link_text {
+  font-size: 15px;
+}
+
