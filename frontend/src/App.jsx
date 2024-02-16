@@ -10,8 +10,19 @@ import Process from './components/process-component/Process';
 import Dasboard from './pages/Dashboard';
 // css
 import './App.css';
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import Calendar from './pages/Calendar';
+import LayoutWrapper from './components/Main-Template/LayoutWrapper';
+
+
+const RouteComponent = () => (
+  noSideBar ? (
+    <>{component}</>
+  ) : (
+    <LayoutWrapper>{component}</LayoutWrapper>
+  )
+);
+
 function App() {
   const {isSidebarCollapsed, setSidebarCollapsed} = useStateContext();
   const handleIconClick = () => {
@@ -31,11 +42,14 @@ function App() {
     //       //     <Component />
     //       //   </LayoutWrapper>
     //       // );
+          
 
     //       return <Route key={index} path={path} element={element} />;
     //     })}
     //   </Routes>
     // </Router>
+
+    
     <div className='h-screen'>
       <BrowserRouter>
         <div className='flex relative dark:bg-main-dark-bg'>

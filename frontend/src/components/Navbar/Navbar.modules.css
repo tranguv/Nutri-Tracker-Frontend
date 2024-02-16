@@ -13,8 +13,7 @@ main {
   padding: 20px;
 }
 
-.sidebar{
-  
+.sidebar {
   color: #fff;
 
   height: 100vh;
@@ -72,4 +71,3 @@ main {
 .link_text {
   font-size: 15px;
 }
-
