@@ -36,7 +36,7 @@ function App() {
     //     })}
     //   </Routes>
     // </Router>
-    <div>
+    <div className='h-screen'>
       <BrowserRouter>
         <div className='flex relative dark:bg-main-dark-bg'>
           <div className='fixed right-4 bottom-4' style={{zIndex:"1000"}}>
@@ -60,7 +60,7 @@ function App() {
           <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg'>
             <NavBar />
           </div>
-          <div className=''>
+          <div className='h-full'>
             <Routes>
               <Route path='/' element={<Dasboard/>}> </Route>
               <Route path='/calendar' element={<Calendar/>}></Route>

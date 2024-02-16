@@ -28,7 +28,7 @@ const Navbar = () => {
                     </div>
                 </form>
                 <div>
-                    <TbBell className=' text-4xl rounded-full cursor-pointer mt-4 ml-3 hover:drop-shadow-xl border border-sky-500'/>
+                    <TbBell className=' text-4xl rounded-full cursor-pointer  mt-4 ml-3 hover:drop-shadow-xl border border-sky-500'/>
                 </div>
             </div>
         </div>

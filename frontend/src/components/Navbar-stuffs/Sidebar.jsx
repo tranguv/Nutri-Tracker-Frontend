@@ -6,8 +6,9 @@ import {
   FaRegChartBar,
   FaCommentAlt,
   FaShoppingBag,
-  FaThList,
+  FaThList,FaCalendarAlt
 } from 'react-icons/fa';
+
 import { NavLink } from 'react-router-dom';
 import './Navbar.modules.css';
 import { Tooltip } from '@chakra-ui/react';
@@ -31,9 +32,9 @@ const Sidebar = ({ children, isSidebarCollapsed, handleIconClick }) => {
       icon: <FaRegChartBar />,
     },
     {
-      path: '/comment',
-      name: 'Comment',
-      icon: <FaCommentAlt />,
+      path: '/calendar',
+      name: 'Calendar',
+      icon: <FaCalendarAlt />,
     },
     {
       path: '/product',
@@ -43,7 +44,7 @@ const Sidebar = ({ children, isSidebarCollapsed, handleIconClick }) => {
     {
       path: '/productList',
       name: 'Product List',
-      icon: <FaThList />,
+      icon: < FaThList />,
     },
   ];
   return (
