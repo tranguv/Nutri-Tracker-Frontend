@@ -5,7 +5,7 @@ import {FiSettings} from "react-icons/fi"
 import Sidebar from './components/Navbar-stuffs/Sidebar';
 import SideBarWrapper from './components/Main-Template/SideBarWrapper';
 import { useStateContext } from './contexts/ContextProvider';
-import NavBar from './components/Navbar-stuffs/Navbar';
+
 import Process from './components/process-component/Process';
 import Dasboard from './pages/Dashboard';
 // css
@@ -72,7 +72,7 @@ function App() {
 
          <div className="  dark:bg-main-bg bg-main-bg min-h-screen w-full flex-2" >
           <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg'>
-            <NavBar />
+            
           </div>
           <div className='h-full'>
             <Routes>

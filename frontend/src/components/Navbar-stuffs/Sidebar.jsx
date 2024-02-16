@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fa';
 
 import { NavLink } from 'react-router-dom';
-import './Navbar.modules.css';
+
 import { Tooltip } from '@chakra-ui/react';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 

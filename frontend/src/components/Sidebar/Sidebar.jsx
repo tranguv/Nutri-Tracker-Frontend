@@ -134,7 +134,6 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
       </div>
     </div>
   );
->>>>>>> main:frontend/src/components/Sidebar/Sidebar.jsx
 };
 
 export default Sidebar;
