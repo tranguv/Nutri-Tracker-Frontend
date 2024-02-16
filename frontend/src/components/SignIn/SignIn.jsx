@@ -12,10 +12,9 @@ import {
   Image,
   Checkbox,
 } from '@chakra-ui/react';
-import planet from './../../assets/planet.png';
-import FormField from '../sign_up/FormField';
+import FormField from '../SignUp/FormField';
 import { useFormik, Formik, Form } from 'formik';
-import './sign_in.modules.css';
+import './SignIn.modules.css';
 function SignIn() {
   const formik = useFormik({
     initialValues: {
