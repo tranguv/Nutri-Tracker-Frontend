@@ -70,13 +70,15 @@ const Sidebar = ({ children, isSidebarCollapsed, handleIconClick }) => {
             className='link'
             activeclassName='active'
           >
-            <TooltipComponent content={item.name}> 
-              <div className='icon'>{item.icon}</div>
-              <div
-                style={{ display: isSidebarCollapsed ? 'block' : 'none' }}
-                className='link_text'
-              >
-                {item.name}
+            <TooltipComponent content={item.name}>
+              <div className='icon-link flex '>
+                <div className='icon mr-3'>{item.icon}</div>
+                <div
+                  style={{ display: isSidebarCollapsed ? 'block' : 'none' }}
+                  className='link_text'
+                >
+                  {item.name}
+                </div>
               </div>
             </TooltipComponent>
           </NavLink>
