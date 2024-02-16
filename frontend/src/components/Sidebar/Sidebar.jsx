@@ -1,23 +1,19 @@
 import React from 'react';
 import {
-  FaTh,
   FaBars,
   FaUserAlt,
   FaRegChartBar,
-  FaCommentAlt,
-  FaShoppingBag,
-  FaThList,
   FaSignOutAlt,
-  FaDelicious,
   FaRunning,
   FaGamepad,
   FaHome,
 } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import './Navbar.modules.css';
-import { color } from 'framer-motion';
 
-const Navbar = ({ children, isSidebarCollapsed, handleIconClick }) => {
+//css
+import './Sidebar.modules.css';
+
+const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
   const menuItem = [
     {
       path: '/dashboard',
@@ -81,7 +77,7 @@ const Navbar = ({ children, isSidebarCollapsed, handleIconClick }) => {
               to={item.path}
               key={index}
               className='link'
-              activeclassName='active'
+              activeclassname='active'
             >
               <div className='icon' style={{ color: 'black' }}>
                 {item.icon}
@@ -99,9 +95,8 @@ const Navbar = ({ children, isSidebarCollapsed, handleIconClick }) => {
           ))}
         </div>
       </div>
-      <main>{children}</main>
     </div>
   );
 };
 
-export default Navbar;
+export default Sidebar;

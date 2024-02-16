@@ -1,7 +1,8 @@
-import SignIn from '../components/sign_in/sign_in';
-import SignUp from '../components/sign_up/sign_up';
+import SignIn from '../components/SignIn/SignIn';
+import SignUp from '../components/SignUp/SignUp';
 import Dasboard from '../pages/Dashboard';
 import AuthForm from '../components/Main-Template/main-template';
+import Settingpg from '../components/Settings/settings';
 
 export const navigation = [
   {
@@ -20,6 +21,12 @@ export const navigation = [
     path: '/dashboard', // home page
     component: <Dasboard />,
     noSideBar: false,
+    isPrivate: true,
+  },
+  {
+    path: '/test',
+    component: <Settingpg />,
+    noSideBar: true,
     isPrivate: true,
   }
 ];

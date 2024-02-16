@@ -1,8 +1,8 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import { HStack, Box, Button, VStack, Select } from '@chakra-ui/react';
-import './sign_up.module.css';
 import FormField from './FormField';
+import './SignUp.modules.css';
 
 const SignUp = () => {
   const formik = useFormik({
