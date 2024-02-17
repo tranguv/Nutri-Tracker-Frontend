@@ -12,9 +12,9 @@ const LayoutWrapper = ({ children }) => {
 
   return (
     <Flex gap={2}>
-      {/* <Box>
+      <Box>
         <Navbar />
-      </Box> */}
+      </Box>
       <Box>
         <Sidebar
           isSidebarCollapsed={isSidebarCollapsed}

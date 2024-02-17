@@ -3,6 +3,7 @@ import SignUp from '../components/SignUp/SignUp';
 import Dasboard from '../pages/Dashboard';
 import AuthForm from '../components/Main-Template/main-template';
 import Settingpg from '../components/Settings/settings';
+import LayoutWrapper from '../components/Main-Template/LayoutWrapper';
 
 export const navigation = [
   {
@@ -25,7 +26,7 @@ export const navigation = [
   },
   {
     path: '/test',
-    component: <Settingpg />,
+    component: <LayoutWrapper />,
     noSideBar: true,
     isPrivate: true,
   }
