@@ -1,13 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import { navigation } from './router/navigation';
-import { TooltipComponent } from '@syncfusion/ej2-react-popups'
-import {FiSettings} from "react-icons/fi"
-import Sidebar from './components/Navbar-stuffs/Sidebar';
-import SideBarWrapper from './components/Main-Template/SideBarWrapper';
+
 import { useStateContext } from './contexts/ContextProvider';
 
-import Process from './components/process-component/Process';
-import Dasboard from './pages/Dashboard';
+
 // css
 import './App.css';
 import React,{ useState } from 'react';
