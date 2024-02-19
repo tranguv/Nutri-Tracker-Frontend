@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import Sidebar from '../Sidebar/Sidebar';
 import Navbar from '../Navbar/Navbar';
-
+import { useStateContext } from '../../contexts/ContextProvider'; 
 const LayoutWrapper = ({ children }) => {
-  const [isSidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const {isSidebarCollapsed, setSidebarCollapsed} = useStateContext();
 
   const handleIconClick = () => {
     setSidebarCollapsed(!isSidebarCollapsed);

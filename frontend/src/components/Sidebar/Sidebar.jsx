@@ -74,7 +74,7 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
             style={{ marginLeft: isSidebarCollapsed ? '50px' : '0px' }}
             className='bars'
           >
-            <FaBars onClick={handleIconClick} />
+            <FaBars onClick={handleIconClick}  />
           </div>
         </div>
         <div>

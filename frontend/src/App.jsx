@@ -7,10 +7,9 @@ import { useStateContext } from './contexts/ContextProvider';
 // css
 import './App.css';
 import React,{ useState } from 'react';
-import Calendar from './pages/Calendar';
-import LayoutWrapper from './components/Main-Template/LayoutWrapper';
-import Navbar from './components/Navbar/Navbar';
 
+
+import LayoutWrapper from './components/Main-Template/LayoutWrapper';
 
 const RouteComponent = () => (
   noSideBar ? (
@@ -32,13 +31,13 @@ function App() {
           const { path, component: Component, isPrivate, noLayoutWrap } = route;
 
           const element = Component;
-           noLayoutWrap ? (  // cmt tam khi nao co side bar bo vo
+           {/* noLayoutWrap ? (  // cmt tam khi nao co side bar bo vo
              <Component />
            ) : (
              <LayoutWrapper>
                <Component />
              </LayoutWrapper>
-           );
+           ); */}
           
 
           return <Route key={index} path={path} element={element} />;
