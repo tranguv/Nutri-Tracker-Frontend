@@ -1,4 +1,8 @@
 import React from 'react';
+
+
+
+
 import {
   FaBars,
   FaUserAlt,
@@ -9,11 +13,12 @@ import {
   FaHome,
 } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-
+import { useStateContext } from '../../contexts/ContextProvider';
 //css
 import './Sidebar.modules.css';
 
 const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
+
   const menuItem = [
     {
       path: '/dashboard',
@@ -46,6 +51,7 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
       icon: <FaSignOutAlt />,
     },
   ];
+  
   return (
     <div className='container'>
       <div
@@ -68,7 +74,7 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
             style={{ marginLeft: isSidebarCollapsed ? '50px' : '0px' }}
             className='bars'
           >
-            <FaBars onClick={handleIconClick} />
+            <FaBars onClick={handleIconClick}  />
           </div>
         </div>
         <div>
