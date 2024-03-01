@@ -3,6 +3,7 @@ import SignUp from '../components/SignUp/SignUp';
 import Dasboard from '../pages/Dashboard';
 import AuthForm from '../components/Main-Template/main-template';
 import Settingpg from '../components/Settings/settings';
+import EditSetting from '../components/SettingEdit/setting_edit';
 
 export const navigation = [
   {
@@ -25,7 +26,7 @@ export const navigation = [
   },
   {
     path: '/test',
-    component: <Settingpg />,
+    component: <EditSetting />,
     noSideBar: true,
     isPrivate: true,
   }
