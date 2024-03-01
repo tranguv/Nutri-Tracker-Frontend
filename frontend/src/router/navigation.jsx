@@ -4,6 +4,7 @@ import Dasboard from '../pages/Dashboard';
 import AuthForm from '../components/Main-Template/main-template';
 import LayoutWrapper from '../components/Main-Template/LayoutWrapper';
 
+
 export const navigation = [
   {
     path: '/', // sign up page
@@ -25,6 +26,7 @@ export const navigation = [
   },
   {
     path: '/test',
+
     component: <LayoutWrapper />,
     noLayoutWrap: true,
     isPrivate: true,

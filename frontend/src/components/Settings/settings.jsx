@@ -1,7 +1,6 @@
 
 import React from "react";
 import styles from './settings.module.css'; // Import as a module
-import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
 
 const Settingpg = () => {
     const Edit = () => {
