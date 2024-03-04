@@ -27,9 +27,8 @@ export const navigation = [
   },
   {
     path: '/test',
-
-    component: <EditSetting />,
-    noLayoutWrap: true,
+    component: <Dasboard />,
+    noLayoutWrap: false,
     isPrivate: true,
   },
 ];
