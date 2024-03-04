@@ -1,0 +1,76 @@
+/* Badge.modules.css */
+
+.badge-container {
+  width: 600px; /* Set a static width */
+  height: 150px;
+  overflow: hidden; /* Hide overflow content */
+  margin: 10px;
+  position: relative;
+  
+
+}
+.badge-container {
+  width: 620px;
+  height: 150px;
+  overflow: hidden;
+  margin: 10px;
+  position: relative;
+}
+
+.badge-container::before,
+.badge-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px; /* Adjust the thickness of the border as needed */
+  background-color: #A09B9A;
+}
+
+.badge-container::before {
+  top: 0;
+}
+
+.badge-container::after {
+  bottom: 0;
+}
+
+
+.badge-wrapper {
+  margin-top: 20px;
+  display: flex;
+  transition: transform 0.3s ease; /* Add smooth transition for better visual effect */
+}
+
+.badgeIcon {
+  width: 200px;
+  height: 60px;
+  padding: 20px;
+  margin-right: 30px;
+  margin-top: 10px;
+  background-color: #D9D9D9;
+  
+}
+
+.show-next-button {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  padding: 5px 10px;
+  background-color: #007bff; /* Set your desired button background color */
+  color: #ffffff; /* Set your desired button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.show-previous-button {
+  position: absolute;
+  top: 10px;
+  right: 60px; /* Adjust the value based on your desired spacing */
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
