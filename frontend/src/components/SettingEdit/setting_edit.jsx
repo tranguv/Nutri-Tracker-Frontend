@@ -48,7 +48,7 @@ const EditSetting = () => {
         />
         <FormField
           label="Unit of Measurement"
-          type="radio"
+          type="checkbox"
           name="unit"
           options={unitOptions}
         />

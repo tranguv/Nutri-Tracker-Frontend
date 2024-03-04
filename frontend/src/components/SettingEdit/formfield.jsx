@@ -26,6 +26,32 @@ const FormField = ({ label, type, id, name, autoComplete, options }) => {
               </div>
             ))}
           </div>
+        ) : type === "checkbox" ? (
+          <ul className="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+            {options.map((option, index) => (
+              <li
+                key={option.value}
+                className={`w-full border-b border-gray-200 ${
+                  index === 0 ? "rounded-t-lg" : ""
+                } dark:border-gray-600`}
+              >
+                <div className="flex items-center ps-3">
+                  <input
+                    id={option.id}
+                    name={name}
+                    type="checkbox"
+                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                  />
+                  <label
+                    htmlFor={option.id}
+                    className="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    {option.label}
+                  </label>
+                </div>
+              </li>
+            ))}
+          </ul>
         ) : (
           <input
             type={type}
