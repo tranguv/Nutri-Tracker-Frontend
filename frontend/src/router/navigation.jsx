@@ -3,7 +3,11 @@ import SignUp from '../components/SignUp/SignUp';
 import Dasboard from '../pages/Dashboard';
 import AuthForm from '../components/Main-Template/main-template';
 import LayoutWrapper from '../components/Main-Template/LayoutWrapper';
-import Report from '../pages/report';
+
+import EditSetting from '../components/SettingEdit/setting_edit';
+
+
+
 export const navigation = [
   {
     path: '/', // sign up page
@@ -25,8 +29,8 @@ export const navigation = [
   },
   {
     path: '/test',
-    component: <LayoutWrapper children={<Report/>}/>,
-    noLayoutWrap: true,
+    component: <Dasboard />,
+    noLayoutWrap: false,
     isPrivate: true,
   },
 ];
