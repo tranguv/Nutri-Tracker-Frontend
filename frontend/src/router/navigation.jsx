@@ -3,9 +3,13 @@ import SignUp from '../components/SignUp/SignUp';
 import Dasboard from '../pages/Dashboard';
 import AuthForm from '../components/Main-Template/main-template';
 import LayoutWrapper from '../components/Main-Template/LayoutWrapper';
+
 import InputLog from '../components/Input/Output/InputLog';
 import MealLog from '../components/Input/Output/MealLog';
 import ExerciseLog from '../components/Input/Output/ExerciseLog';
+
+import EditSetting from '../components/SettingEdit/setting_edit';
+
 
 
 export const navigation = [
@@ -35,8 +39,8 @@ export const navigation = [
   },
   {
     path: '/test',
-    component: <LayoutWrapper />,
-    noLayoutWrap: true,
+    component: <Dasboard />,
+    noLayoutWrap: false,
     isPrivate: true,
   },
 ];

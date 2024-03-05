@@ -1,76 +1,66 @@
 import React from "react";
-import {useState} from 'react';
-// import {useHistory} from 'react-router-dom';
-import styles from './setting_edit.module.css'; // Import as a module
-
+import styles from "./setting_edit.module.css";
+import FormField from "./formfield"; // Make sure to provide the correct path
 
 const EditSetting = () => {
-    // const history = useHistory();
-    const box = [
-        { label: 'Full Name' },
-        { label: 'Date of Birth', type: 'date'},
-        { label: 'Gender', type:'radio', options:['Female', 'Male', 'Other']},
-        { label: 'Blood Type' },
-        { label: 'Email Address' },
-        { label: 'Unit of measurement', type:'radio', options:['cm', 'ft', 'kg', 'lbs'] },
-    ];
-    const [inputs, setInputs] = useState({});
-    const changeHandle = (event) => {
-        const { name, value, type, checked } = event.target;
-        setInputs((values) => ({
-            ...values,
-            [name]: type === 'radio' ? value : checked,
-        }));
-    };
-    const changeSubmit = (event) => {
-        event.preventDefault();
-        alert(JSON.stringify(inputs, null, 2));
-        // history.push('/Settingpg')
-    };
-    
-    return(
-        <div className={styles.container}>
-            <div className={styles.infoContainer}>
-                {box.map((box, index) => (
-                    <div key={index} className={styles.infoBox}>
-                        <div className={styles.infoText}>{box.label}</div>
-                    </div>
-                ))}
-            </div>
+  const genderOptions = [
+    { id: "female", label: "Female", value: "female" },
+    { id: "male", label: "Male", value: "male" },
+    { id: "other", label: "Other", value: "other" },
+  ];
+  const unitOptions = [
+    { id: "cm", label: "Centimeters", value: "cm" },
+    { id: "ft", label: "Feet", value: "ft" },
+    { id: "kg", label: "Kilograms", value: "kg" },
+    { id: "lbs", label: "Pounds", value: "lbs" },
+  ];
 
-            <form className={styles.formContainer} onSubmit={changeSubmit}>
-                {box.map((box, index) => (
-                    <div key={index} className={styles.inputBox}>
-                        {box.type === 'radio' ? (
-                            box.options.map((option, optionIndex) => (
-                                <label key={optionIndex} className={styles.radioLabel}>
-                                    {option}
-                                    <input
-                                        type="radio"
-                                        name={box.label.toLowerCase()}
-                                        checked={inputs[box.label.toLowerCase()] === option}
-                                        onChange={changeHandle}
-                                    />
-                                </label>
-                            ))
-                        ) : (
-                            <>
-                                <label>{box.label}</label>
-                                <input
-                                    type={box.type === 'date' ? 'date' : 'text'}
-                                    name={box.label.toLowerCase()}
-                                    value={inputs[box.label.toLowerCase()] || ''}
-                                    onChange={changeHandle}
-                                />
-                            </>
-                        )}
-                    </div>
-                ))}
-                <div className={styles.SaveButtonContainer}>
-                    <button type="submit">Save</button>
-                </div>
-            </form>
+  return (
+    <>
+      <form>
+        <FormField
+          label="Full Name"
+          type="text"
+          id="full-name"
+          name="full-name"
+          autoComplete="given-name"
+          className={styles.inputField}
+        />
+        <FormField label="Date of Birth" type="date" id="dob" name="dob" />
+        <FormField
+          label="Gender"
+          type="radio"
+          name="gender"
+          options={genderOptions}
+        />
+        <FormField
+          label="Blood Type"
+          type="text"
+          id="bloodtype"
+          name="bloodtype"
+        />
+        <FormField
+          label="Email Address"
+          type="email"
+          id="email"
+          name="email"
+          autoComplete="email"
+        />
+        <FormField
+          label="Unit of Measurement"
+          type="checkbox"
+          name="unit"
+          options={unitOptions}
+        />
+      </form>
+      <div className="w-28 h-12 relative" style={{ marginLeft: "1276px" }}>
+        <div className="w-28 h-12 left-0 top-0 absolute bg-zinc-300 rounded-lg" />
+        <div className="self-stretch text-black-300 text-base font-medium font-serif leading-6 tracking-tight">
+          Save
         </div>
-    );
+      </div>
+    </>
+  );
 };
+
 export default EditSetting;

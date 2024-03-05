@@ -9,19 +9,7 @@ import React, { useState } from 'react';
 
 import LayoutWrapper from './components/Main-Template/LayoutWrapper';
 
-// const RouteComponent = () => (
-//   noSideBar ? (
-//     <>{component}</>
-//   ) : (
-//     <LayoutWrapper>{component}</LayoutWrapper>
-//   )
-// );
-
 function App() {
-  // const { isSidebarCollapsed, setSidebarCollapsed } = useStateContext();
-  // const handleIconClick = () => {
-  //   setSidebarCollapsed(!isSidebarCollapsed);
-  // };
   return (
     <Router>
       <Routes>
