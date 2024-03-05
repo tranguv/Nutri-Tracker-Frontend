@@ -9,6 +9,8 @@
   
 
 }
+
+
 .badge-container {
   width: 620px;
   height: 150px;
@@ -57,8 +59,6 @@
   top: 10px;
   right: 0px;
   padding: 5px 10px;
-  background-color: #007bff; /* Set your desired button background color */
-  color: #ffffff; /* Set your desired button text color */
   border: none;
   cursor: pointer;
 }
@@ -66,10 +66,8 @@
 .show-previous-button {
   position: absolute;
   top: 10px;
-  right: 60px; /* Adjust the value based on your desired spacing */
+  right: 40px; /* Adjust the value based on your desired spacing */
   padding: 5px 10px;
-  background-color: #007bff;
-  color: #ffffff;
   border: none;
   cursor: pointer;
 }

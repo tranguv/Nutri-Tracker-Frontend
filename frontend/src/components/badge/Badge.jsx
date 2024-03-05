@@ -1,6 +1,9 @@
 // BadgeContainer.jsx
 import React, { useState } from 'react';
 import './Badge.modules.css';
+import { FaArrowAltCircleRight } from "react-icons/fa";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
+
 
 const Badge = () => {
   const [visibleIndex, setVisibleIndex] = useState(0);
@@ -42,12 +45,12 @@ const Badge = () => {
       <div>
         {visibleIndex < maxBadge && (
           <button className="show-next-button" onClick={showNextBadge}>
-            Next
+            <FaArrowAltCircleRight style={{ fontSize: '2em' }}/>
           </button>
         )}
         {visibleIndex > 0 && (
           <button className="show-previous-button" onClick={showPreviousBadge}>
-            Prev
+            <FaArrowAltCircleLeft style={{ fontSize: '2em' }}/>
           </button>
         )}
       </div>
