@@ -3,6 +3,9 @@ import SignUp from '../components/SignUp/SignUp';
 import Dasboard from '../pages/Dashboard';
 import AuthForm from '../components/Main-Template/main-template';
 import LayoutWrapper from '../components/Main-Template/LayoutWrapper';
+import InputLog from '../components/Input/Output/InputLog';
+import MealLog from '../components/Input/Output/MealLog';
+import ExerciseLog from '../components/Input/Output/ExerciseLog';
 
 
 export const navigation = [
@@ -25,8 +28,13 @@ export const navigation = [
     isPrivate: true,
   },
   {
+    path: '/input',
+    component: <LayoutWrapper children={<InputLog/>} />,
+    noLayoutWrap: true,
+    isPrivate: true,
+  },
+  {
     path: '/test',
-
     component: <LayoutWrapper />,
     noLayoutWrap: true,
     isPrivate: true,

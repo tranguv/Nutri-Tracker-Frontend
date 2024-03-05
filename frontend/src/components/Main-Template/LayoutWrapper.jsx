@@ -10,7 +10,7 @@ const LayoutWrapper = ({ children }) => {
     setSidebarCollapsed(!isSidebarCollapsed);
   };
 
-  const sidebarWidth = isSidebarCollapsed ? '150px' : '30px';
+  const sidebarWidth = isSidebarCollapsed ? '150px' : '50px';
 
   return (
     <SimpleGrid gap={2} templateColumns={`${sidebarWidth} 1fr`}>
@@ -20,7 +20,7 @@ const LayoutWrapper = ({ children }) => {
           handleIconClick={handleIconClick}
         />
       </Box>
-      <Box>
+      <Box className='flex flex-col'>
         <Navbar />
         {children}
       </Box>
