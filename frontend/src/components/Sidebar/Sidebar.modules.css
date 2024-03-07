@@ -6,19 +6,11 @@
 
 .container {
   display: flex;
-}
-
-main {
+  height: 100vh;
   width: 100%;
-  padding: 20px;
-}
-
-.sidebar {
+  max-width: 200px;
   background:#d5ffc5;
   color: black;
-  height: 100vh;
-  width: 200px;
-  transition: all 0.5s;
 }
 
 .top_section {
@@ -53,7 +45,7 @@ main {
   border-radius: 10px;
 }
 
-.sidebar .link:last-child {
+.container .link:last-child {
   position: fixed;
   bottom: 10px;
 }

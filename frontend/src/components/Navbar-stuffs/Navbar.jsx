@@ -12,10 +12,12 @@ import {
   FaRunning,
   FaGamepad,
   FaHome,
-} from 'react-icons/fa';
+} from 'react-icons';
 import { NavLink } from 'react-router-dom';
 import './Navbar.modules.css';
 import { color } from 'framer-motion';
+
+
 
 const Navbar = ({ children, isSidebarCollapsed, handleIconClick }) => {
   const menuItem = [
