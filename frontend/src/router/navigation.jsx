@@ -5,6 +5,7 @@ import AuthForm from '../components/Main-Template/main-template';
 import LayoutWrapper from '../components/Main-Template/LayoutWrapper';
 import EditSetting from '../components/SettingEdit/setting_edit';
 import CheckBar from '../components/CheckBar/CheckBar';
+import TaskName from '../components/TaskName/TaskName';
 
 export const navigation = [
   {
@@ -27,7 +28,7 @@ export const navigation = [
   },
   {
     path: '/test',
-    component: <CheckBar handleOnClick={true} />,
+    component: <TaskName />,
     noLayoutWrap: false,
     isPrivate: true,
   },
