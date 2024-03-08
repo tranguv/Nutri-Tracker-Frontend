@@ -11,12 +11,14 @@ const CheckBar = ({ tasks, handleOnClick }) => {
         flexDirection: "row",
         alignItems: "center",
         borderRadius: "10px",
-        background: "green",
+        background: "white",
+        color: "black",
         gap: "10px",
         padding: "10px",
         fontSize: "1rem",
         opacity: handleOnClick ? 0.5 : 1,
         transition: "opacity 0.5s ease",
+        marginBottom: "10px",
       }}
     >
       <Checkbox colorScheme="green" defaultChecked />
@@ -24,15 +26,15 @@ const CheckBar = ({ tasks, handleOnClick }) => {
       {/* Name of the task */}
       <div
         style={{
-          color: "white",
+          // color: "black",
           textDecoration: handleOnClick ? "line-through" : null,
         }}
       >
         Plank
       </div>
-      <div style={{ width: "1px", height: "90%", background: "#FFFCF5" }}></div>
+      <div style={{ width: "1px", height: "90%", background: "grey" }}></div>
       {/* Time Stamp */}
-      <div style={{ color: "white" }}> 00:00 </div>
+      <div> 00:00 </div>
       <MdDragHandle style={{ marginLeft: "auto" }} />
     </div>
   );

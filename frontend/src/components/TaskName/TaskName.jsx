@@ -9,13 +9,19 @@ const TaskName = ({ currentTask }) => {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        maxWidth: "300px",
+        maxWidth: "400px",
         gap: "10px",
         padding: "10px",
         fontSize: "1rem",
       }}
     >
-      <img src={homeIcon} alt="homeIcon" width={70} height={70} />
+      <img
+        src={homeIcon}
+        alt="homeIcon"
+        width={50}
+        height={50}
+        style={{ borderRadius: "50px" }}
+      />
       <div style={{ fontSize: "0.8rem" }}>
         <div style={{ fontWeight: "bold" }}>Home Workouts</div>
         <div>Task ({currentTask}/15)</div>
