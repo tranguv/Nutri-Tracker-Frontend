@@ -9,6 +9,7 @@ import "./index.css";
 import { ContextProvider } from "./contexts/ContextProvider";
 import { ThemeProvider } from "@mui/material/styles";
 import { StyledEngineProvider } from "@mui/material/styles";
+import theme from "./utils/theme.js";
 
 
 registerLicense(
@@ -17,12 +18,14 @@ registerLicense(
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <StyledEngineProvider injectFirst />
-    <ChakraProvider>
-      <ContextProvider>
-        <App />
-      </ContextProvider>
-    </ChakraProvider>
-    <StyledEngineProvider />
-  </React.StrictMode>
+    <ThemeProvider theme={theme} >
+      <StyledEngineProvider injectFirst>
+        <ChakraProvider>
+          <ContextProvider>
+            <App />
+          </ContextProvider>
+        </ChakraProvider>
+      </StyledEngineProvider>
+    </ThemeProvider>
+  </React.StrictMode >
 );
