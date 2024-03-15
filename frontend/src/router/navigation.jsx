@@ -4,9 +4,9 @@ import Dasboard from '../pages/Dashboard';
 import AuthForm from '../components/Main-Template/main-template';
 import LayoutWrapper from '../components/Main-Template/LayoutWrapper';
 
-import InputLog from '../components/Input/Output/InputLog';
-import MealLog from '../components/Input/Output/MealLog';
-import ExerciseLog from '../components/Input/Output/ExerciseLog';
+import InputLog from '../components/Input/LoggingData/InputLog';
+import MealLog from '../components/Input/LoggingData/MealLog';
+import ExerciseLog from '../components/Input/LoggingData/ExerciseLog';
 
 import EditSetting from '../components/SettingEdit/setting_edit';
 
@@ -38,8 +38,20 @@ export const navigation = [
     isPrivate: true,
   },
   {
+    path: '/meallog',
+    component: <LayoutWrapper children={<MealLog/>} />,
+    noLayoutWrap: true,
+    isPrivate: true,
+  },
+  {
+    path: '/exerciselog',
+    component: <LayoutWrapper children={<ExerciseLog/>} />,
+    noLayoutWrap: true,
+    isPrivate: true,
+  },
+  {
     path: '/test',
-    component: <Dasboard />,
+    component: <MealLog />,
     noLayoutWrap: false,
     isPrivate: true,
   },

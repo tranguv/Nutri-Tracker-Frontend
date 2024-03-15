@@ -1,0 +1,6 @@
+/* Add this CSS to your stylesheet */
+.button {
+    outline: none; /* Remove outline when button is focused */
+    border: none;
+  }
+  

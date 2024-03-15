@@ -1,0 +1,9 @@
+/* Add this to your CSS file */
+#dropdownContent {
+    z-index: 10; /* Ensure the dropdown is above other content */
+  }
+  
+  #dropdownContent.hidden {
+    display: none; /* Hide the dropdown by default */
+  }
+  
