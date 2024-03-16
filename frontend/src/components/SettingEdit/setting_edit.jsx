@@ -16,8 +16,8 @@ const EditSetting = () => {
   ];
 
   return (
-    <>
-      <form>
+    <div className={styles.container}>
+      <form className={styles.form}>
         <FormField
           label="Full Name"
           type="text"
@@ -53,13 +53,12 @@ const EditSetting = () => {
           options={unitOptions}
         />
       </form>
-      <div className="w-28 h-12 relative" style={{ marginLeft: "1276px" }}>
-        <div className="w-28 h-12 left-0 top-0 absolute bg-zinc-300 rounded-lg" />
-        <div className="self-stretch text-black-300 text-base font-medium font-serif leading-6 tracking-tight">
+      <div class="static h-50 w-22">
+        <button class="absolute mr-10 mb-10 bottom-0 right-0 h-10 w-20 rounded-md border-1 bg-gray-100 font-medium">
           Save
-        </div>
+        </button>
       </div>
-    </>
+    </div>
   );
 };
 

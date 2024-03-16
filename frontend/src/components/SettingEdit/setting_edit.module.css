@@ -1,3 +1,16 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .input-field {
-    width: 400px;
-  }
+  width: 400px;
+}
+.form {
+  width: 100%;
+  max-width: 1000px; /* Adjust this value according to your design */
+  padding: 20px;
+  /* Add additional styling as needed */
+}
+
+
