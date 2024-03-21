@@ -5,7 +5,6 @@ import AuthForm from '../components/Main-Template/main-template';
 import LayoutWrapper from '../components/Main-Template/LayoutWrapper';
 
 import EditSetting from '../components/SettingEdit/setting_edit';
-import LandingPage from '../pages/landing-page';
 
 
 export const navigation = [
@@ -29,8 +28,8 @@ export const navigation = [
   },
   {
     path: '/test',
-    component:<LandingPage />,
-    noLayoutWrap: true,
+    component: <Dasboard />,
+    noLayoutWrap: false,
     isPrivate: true,
   },
 ];
