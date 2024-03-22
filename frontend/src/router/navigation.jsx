@@ -4,7 +4,9 @@ import Dasboard from '../pages/Dashboard';
 import AuthForm from '../components/Main-Template/main-template';
 import LayoutWrapper from '../components/Main-Template/LayoutWrapper';
 import EditSetting from '../components/SettingEdit/setting_edit';
-
+import CheckBar from '../components/CheckBar/CheckBar';
+import TaskName from '../components/TaskName/TaskName';
+import DailyTask from '../components/Daily Task/DailyTask';
 
 export const navigation = [
   {
