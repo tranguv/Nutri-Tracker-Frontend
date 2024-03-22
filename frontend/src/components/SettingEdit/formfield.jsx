@@ -2,15 +2,13 @@ import React from "react";
 
 const FormField = ({ label, type, id, name, autoComplete, options }) => {
   return (
-    <div className="ml-[650px] mt-[100px] col-span-full">
-      <div className="w-96 h-12 p-3 bg-slate-50 rounded flex-col justify-start items-start gap-2.5 inline-flex">
-        <div className="self-stretch text-black-300 text-base font-medium font-serif leading-6 tracking-tight">
-          {label}
-        </div>
+    <div className="mb-5 mt-50">
+      <div className=" p-3 bg-slate-50 rounded items-center">
+        <div className="block text-sm font-medium text-black-700">{label}</div>
         {type === "radio" ? (
-          <div className="mt-2 space-y-2">
+          <div className="flex">
             {options.map((option) => (
-              <div key={option.value} className="flex items-center gap-x-3">
+              <div key={option.value} className="flex items-center me-4">
                 <input
                   id={option.id}
                   name={name}
@@ -19,7 +17,7 @@ const FormField = ({ label, type, id, name, autoComplete, options }) => {
                 />
                 <label
                   htmlFor={option.id}
-                  className="block text-sm font-medium leading-6 text-gray-900"
+                  className="ml-1 text-sm font-medium leading-6 text-gray-900"
                 >
                   {option.label}
                 </label>
@@ -27,20 +25,18 @@ const FormField = ({ label, type, id, name, autoComplete, options }) => {
             ))}
           </div>
         ) : type === "checkbox" ? (
-          <ul className="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+          <div className="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
             {options.map((option, index) => (
-              <li
+              <div
                 key={option.value}
-                className={`w-full border-b border-gray-200 ${
-                  index === 0 ? "rounded-t-lg" : ""
-                } dark:border-gray-600`}
+                className={`w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600`}
               >
                 <div className="flex items-center ps-3">
                   <input
                     id={option.id}
                     name={name}
                     type="checkbox"
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
                   />
                   <label
                     htmlFor={option.id}
@@ -49,16 +45,16 @@ const FormField = ({ label, type, id, name, autoComplete, options }) => {
                     {option.label}
                   </label>
                 </div>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         ) : (
           <input
             type={type}
             name={name}
             id={id}
             autoComplete={autoComplete}
-            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className=" p-5 block w-full rounded-md border-1 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           />
         )}
       </div>
