@@ -29,8 +29,8 @@ export const navigation = [
   },
   {
     path: '/test',
-    component: <DailyTask />,
-    noLayoutWrap: true,
+    component: <EditSetting />,
+    noLayoutWrap: false,
     isPrivate: true,
   },
 ];
