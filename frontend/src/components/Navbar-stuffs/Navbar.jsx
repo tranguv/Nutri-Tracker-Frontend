@@ -107,3 +107,4 @@ const Navbar = ({ children, isSidebarCollapsed, handleIconClick }) => {
 };
 
 export default Navbar;
+

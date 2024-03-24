@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import './Badge.modules.css';
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
+import { userBadge } from '../../utils/util';
 
 
-const Badge = () => {
+const Badge = ({ title }) => {
   const [visibleIndex, setVisibleIndex] = useState(0);
   const maxBadge = 9;
   const badgeWidth = 70; // Adjust this value based on your badge width
@@ -33,24 +34,30 @@ const Badge = () => {
 
   return (
     <div className="badge-container">
-      <h2 className="container-heading">Badge</h2>
+      <h2 className="container-heading text-2xl">{title}</h2>
       <div className="badge-wrapper" style={{ transform: calculateTransform() }}>
         {/* Badges */}
-        {[...Array(10).keys()].map((badgeIndex) => (
-          <div key={badgeIndex} className="badgeIcon">
-            <span>{badgeIndex + 1}</span>
-          </div>
+        {userBadge.map((badgeIndex) => (
+          <img 
+          key={badgeIndex}
+          src={badgeIndex.src} 
+          alt={badgeIndex.alt}
+          className="badge rounded-full mr-8"
+           />
+          // <div key={badgeIndex} className="badgeIcon">
+          //   <span>{badgeIndex + 1}</span>
+          // </div>
         ))}
       </div>
       <div>
         {visibleIndex < maxBadge && (
           <button className="show-next-button" onClick={showNextBadge}>
-            <FaArrowAltCircleRight style={{ fontSize: '2em' }}/>
+            <FaArrowAltCircleRight style={{ fontSize: '3em' }}/>
           </button>
         )}
         {visibleIndex > 0 && (
           <button className="show-previous-button" onClick={showPreviousBadge}>
-            <FaArrowAltCircleLeft style={{ fontSize: '2em' }}/>
+            <FaArrowAltCircleLeft style={{ fontSize: '3em' }}/>
           </button>
         )}
       </div>
