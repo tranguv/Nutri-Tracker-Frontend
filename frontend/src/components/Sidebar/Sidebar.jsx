@@ -49,7 +49,7 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
 
   return (
     <div
-      className='container'
+      className='container-sidebar'
       style={{
         position: 'fixed',
         width: isSidebarCollapsed ? '10rem' : '4rem',
