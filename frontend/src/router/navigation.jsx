@@ -36,7 +36,7 @@ export const navigation = [
   },
   {
     path: '/test',
-    component: <EditSetting />,
+    component: <Dasboard />,
     noLayoutWrap: false,
     isPrivate: true,
   },
