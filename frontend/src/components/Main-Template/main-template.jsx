@@ -33,20 +33,22 @@ const AuthForm = ({ navbar, children }) => {
         </GridItem>
       )}
       <GridItem colSpan={toggle ? 4 : 5} display="flex" justifyContent="center" alignItems="center">
-        <Container maxW="100vh">
-          <Box padding="4" bg="" maxW={toggle ? '4xl' : 'full'} borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-            <Button className='raised' onClick={handleClick} mb="4" position="relative" borderRadius="full">
-              {toggle ? (
-                <Image src={arrow} position='absolute' transform='rotate(180deg)' fit="cover" />
-              ) : (
-                <Image src={arrow} position='absolute' transform='rotate(0deg)' fit="cover" />
-              )}
-            </Button>
+        <div>
+          <Container maxW="100vh" alignItems="center">
+            <Box padding="4" bg="" maxW={toggle ? '2xl' : '3xl'} borderRadius="lg" sx={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+              <Button className='raised' onClick={handleClick} mb="4" position="relative" borderRadius="full">
+                {toggle ? (
+                  <Image src={arrow} position='absolute' transform='rotate(180deg)' fit="cover" />
+                ) : (
+                  <Image src={arrow} position='absolute' transform='rotate(0deg)' fit="cover" />
+                )}
+              </Button>
 
-            {children}
+              {children}
 
-          </Box>
-        </Container>
+            </Box>
+          </Container>
+        </div>
       </GridItem>
     </Grid>
   );

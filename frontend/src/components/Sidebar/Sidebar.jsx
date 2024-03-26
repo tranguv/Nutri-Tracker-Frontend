@@ -11,7 +11,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import { useStateContext } from '../../contexts/ContextProvider';
 //css
-import './Sidebar.modules.css';
+
 
 const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
   const menuItem = [
@@ -49,7 +49,7 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
 
   return (
     <div
-      className='container'
+      className='flex h-screen w-full max-w-[200px] bg-green-200 text-black'
       style={{
         position: 'fixed',
         width: isSidebarCollapsed ? '10rem' : '4rem',
@@ -61,7 +61,7 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
         alignItems: 'center',
       }}
     >
-      <div className='top_section'>
+      <div className='flex items-center px-5 py-4 pt-12'>
         <h1
           style={{ display: isSidebarCollapsed ? 'block' : 'none' }}
           className='logo'
@@ -70,7 +70,7 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
         </h1>
         <div
           style={{ marginLeft: isSidebarCollapsed ? '50px' : '0px' }}
-          className='bars'
+          className='text-2xl cursor-pointer'
         >
           <FaBars onClick={handleIconClick} />
         </div>
@@ -80,10 +80,10 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
           <NavLink
             to={item.path}
             key={index}
-            className='link'
+            className='flex items-center text-white px-4 py-3 gap-4 transition duration-500'
             activeclassname='active'
           >
-            <div className='icon' style={{ color: 'black' }}>
+            <div className='text-2xl' style={{ color: 'black' }}>
               {item.icon}
             </div>
             <div
@@ -91,7 +91,7 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
                 display: isSidebarCollapsed ? 'block' : 'none',
                 color: 'black',
               }}
-              className='link_text'
+              className='flex items-center px-4 py-2 gap-4 transition duration-500 rounded-lg hover:bg-green-500 hover:text-black'
             >
               {item.name}
             </div>

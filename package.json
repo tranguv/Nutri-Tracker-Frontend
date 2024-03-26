@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/x-charts": "^6.19.5",
+    "@syncfusion/ej2-base": "^24.2.7",
+    "@syncfusion/ej2-react-charts": "^24.2.8",
+    "@syncfusion/ej2-react-schedule": "^24.2.4",
+    "framer-motion": "^11.0.3",
+    "react-router-dom": "^6.22.0"
+  }
+}
