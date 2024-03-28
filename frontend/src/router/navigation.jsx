@@ -6,6 +6,7 @@ import LayoutWrapper from '../components/Main-Template/LayoutWrapper';
 
 import EditSetting from '../components/SettingEdit/setting_edit';
 import ProfilePage from '../components/profilePage/ProfilePage';
+import Dashboard from '../pages/Dashboard';
 
 const user = {
   name: "John Doe",
@@ -36,7 +37,7 @@ export const navigation = [
   },
   {
     path: '/test',
-    component: <Dasboard />,
+    component: <Dashboard />,
     noLayoutWrap: false,
     isPrivate: true,
   },

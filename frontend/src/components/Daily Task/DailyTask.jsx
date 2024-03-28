@@ -10,6 +10,7 @@ const DailyTask = () => {
     "Eat Lunch",
     "Eat Dinner",
     "Exercise",
+    "Exercise"
   ];
   return (
     <div className={styles["daily-task-bar"]}>
@@ -26,7 +27,7 @@ const DailyTask = () => {
           Finish Tasks To Earn Points
         </h2>
         <div className={styles["task-name-div"]}> 
-          <TaskName currentTask={1} />
+          <TaskName currentTask={2} />
         </div>
         {taskName.map((task, index) => {
           return <CheckBar tasks={task} />;

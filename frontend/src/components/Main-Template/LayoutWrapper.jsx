@@ -65,7 +65,7 @@ const LayoutWrapper = ({ children }) => {
           <div
             style={{
               position: 'relative',
-              top: '80px',
+              top: '10px',
               // overflowY: 'scroll',
               // overflowX: 'hidden',
               height: 'calc(100vh - 82px)',
@@ -78,7 +78,7 @@ const LayoutWrapper = ({ children }) => {
       </div>
      
         
-        <FiSettings size={30} />
+        
       
     </div>
   );
