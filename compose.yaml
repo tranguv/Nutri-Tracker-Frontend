@@ -5,10 +5,11 @@ services:
   # we can create multiple services as well
   client:
     # specify the image to build the container from
-    # this can be any image available in docker hub or a custom one or the one we want to build
+    # this can be any image available in docker hub or a custom one or the one we want to build\
+    container_name: nutri-tracker-frontend
     build:
       # specify the path to the Dockerfile
-      context: .
+      context: ./frontend
       # specify the file name (optional)
       dockerfile: Dockerfile
     
@@ -22,13 +23,13 @@ services:
       # we specify the files to watch for changes
       watch:
         # it'll watch for changes in package.json and package-lock.json and rebuild the container if there are any changes
-        - path: ./package.json
+        - path: ./frontend/package.json
           action: rebuild
-        - path: ./package-lock.json
+        - path: ./frontend/package-lock.json
           action: rebuild
         # it'll watch for changes in the frontend directory and sync the changes with the container real time
-        - path: .
-          target: /app
+        - path: ./frontend/src
+          target: /app/src
           action: sync
 
     # specify the volumes to mount
@@ -36,10 +37,5 @@ services:
     # due to this, any changes made to the files in the current directory will be reflected inside the container. It is similar to the -v flag in `docker run` command. 
     # even if a container is stopped or deleted, volumes are not deleted and can be used by other containers as well.
     volumes:
-      # over here, we are mounting the current directory to the `/app` directory inside the container (which is the working directory of the container)
-      # syntax is `<path to the directory on host>:<path to the directory inside the container>`
-      # we're doing this because we want to reflect the changes made to the files in the current directory inside the container
-      - .:/app
-      # we also mount the node_modules directory inside the container at /app/node_modules. This is done to avoid installing the node_modules inside the container. 
-      # node_modules will be installed on the host machine and mounted inside the container
-      - /app/node_modules
+      - ./frontend/src:/app/src/ # mounted whole src to avoid missing reload on new files
+      - ./frontend/public:/app/public

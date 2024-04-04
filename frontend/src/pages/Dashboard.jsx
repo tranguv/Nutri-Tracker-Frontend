@@ -17,7 +17,7 @@ const Dashboard = () => {
       <GridItem rowSpan={1}>
         <div style={{ background: 'blue', height: '150px' }}>Dashboard</div>
       </GridItem>
-      <div>Heloooo wut</div>
+      <div>Heloooo trang</div>
       <GridItem rowSpan={1}>
         <Flex justify='space-between' p={2} gap={4}>
           <Process />
