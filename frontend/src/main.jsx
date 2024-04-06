@@ -7,7 +7,7 @@ import { registerLicense } from '@syncfusion/ej2-base';
 import './index.css';
 import { ContextProvider } from './contexts/ContextProvider';
 
-registerLicense('ORg4AjUWIQA/Gnt2UVhiQlJPd11dXmJWd1p/THNYflR1fV9DaUwxOX1dQl9nSXxSd0RnWn9fcXBdRmU=');
+registerLicense('Ngo9BigBOggjHTQxAR8/V1NAaF1cXmhKYVRpR2Nbe054flFHal5VVBYiSV9jS3pTdEdqW39acXZRT2RdVg==');
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

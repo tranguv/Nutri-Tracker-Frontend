@@ -1,0 +1,42 @@
+.daily-task-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: greenyellow;
+  border-radius: 10px;
+  gap: 10px;
+  max-width: 300px;
+}
+
+.top-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  flex-shrink: 0;
+}
+
+.title-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.title-container h2 {
+  text-align: center;
+}
+
+.finish-task-header {
+  font-family: monospace;
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.task-name-div {
+    margin-bottom: 10px;
+}
