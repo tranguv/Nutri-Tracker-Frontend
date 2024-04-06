@@ -1,48 +1,49 @@
+html, body{
+  height: 100%;
+  margin: 0;
+}
 .placeholder-container {
   display: flex;
-  margin-top: 286px;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin-top: 100px;
+  justify-content: center;
   align-items: center;
-
+  
 }
 .placeholder {
-  width: 300px;
+  width: 500px;
   height: 59px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 6px;
-  margin-left: 819px; /* Adjusted margin for better positioning */
-  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 2%;
   position: relative;
+  margin-left: 35%;
 }
 .placeholderText {
   left: 29px;
   top: 18px;
-  position: absolute;
-  text-align: center;
   color: black;
   font-size: 19px;
-  font-family: 'Hermeneus One';
+  font-family: "Hermeneus One";
   font-weight: 400;
   word-wrap: break-word;
 }
-
-.EditButtonContainer {
-  margin-left: 1250px; /* To align it to the right */
-  margin-top: 100px;
-}
-
 /* Apply styles to the button directly */
 .EditButtonContainer button {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
   padding: 10px;
   width: 100px;
   height: 41px;
+  text-align: center;
   font-size: 19px;
   font-family: Hermeneus One;
   font-weight: 400px;
-  word-wrap: break-word;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 10px;
-  text-align: center;
   cursor: pointer;
 }
