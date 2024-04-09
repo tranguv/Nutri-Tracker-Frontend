@@ -2,17 +2,14 @@ ARG NODE_VERSION=21.5.0
 
 FROM node:${NODE_VERSION}-alpine
 
-# Set the working directory 
-WORKDIR /app
+RUN addgroup app && adduser -S -G app app
+USER app
 
-# Copy over dependency files 
-COPY package.json ./
-COPY package-lock.json ./
-
-# Install 
-RUN npm install --ignore-scripts
-
-# Copy all files 
+WORKDIR /app 
+COPY --chown=app:app package*.json ./
+RUN npm install 
 COPY . .
+
+EXPOSE 5173 
 
 CMD ["npm", "run", "dev"]
