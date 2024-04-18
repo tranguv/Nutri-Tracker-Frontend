@@ -19,11 +19,11 @@ const Settingpg = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center h-screen relative">
-      {/* Flex container for the avatar and all placeholders */}
-      <div className="flex items-start">
+    <div className="flex flex-col items-center h-screen justify-center p-8">
+      {/* Top section with avatar and 'Your profile'*/}
+      <div className="flex mb-8 items-start">
         {/* Avatar on the left */}
-        <div className="w-10 h-12 bg-violet-300 rounded-2xl overflow-hidden">
+        <div className="mr-4 w-32 h-36 bg-violet-300 rounded-2xl overflow-hidden flex-shrink-0">
           <img
             src={avatarImage}
             className="w-full h-full object-cover"
@@ -31,17 +31,18 @@ const Settingpg = () => {
           />
         </div>
 
-        {/* Placeholders including 'Your Profile' on the right */}
+        {/* 'Your profile' heading */}
         <div className="ml-4">
           {/* 'Your Profile' text right on top of the full name */}
-          <div className="text-black font-semibold font-['Nunito Sans'] mb-2">
+          <div className="text-black font-semibold text-lg mb-4">
             Your Profile
           </div>
+          {/* Placeholders*/}
           <div className="flex flex-col">
             {placeholders.map((placeholder, index) => (
               <div
                 key={index}
-                className="w-96 py-4 bg-gray-300 rounded-lg flex justify-center items-center my-2"
+                className="w-96 py-4 bg-gray-300 rounded-lg flex p-10 items-center my-2"
               >
                 <div className="text-black font-HermeneusOne">
                   {placeholder.label}
@@ -54,7 +55,10 @@ const Settingpg = () => {
 
       {/* Edit button at the bottom right */}
       <div className="absolute bottom-0 right-0 mr-20 mb-10 mt-5">
-        <button onClick={Edit} className="bg-violet-300 text-black font-medium px-8 py-2 rounded-lg">
+        <button
+          onClick={Edit}
+          className="bg-violet-300 text-black font-medium px-8 py-2 rounded-lg"
+        >
           Edit
         </button>
       </div>
