@@ -25,7 +25,7 @@ const FormField = ({ label, type, id, name, autoComplete, options }) => {
             ))}
           </div>
         ) : type === "checkbox" ? (
-          <div className=" w-full text-sm font-medium text-gray-900 bg-white  rounded-lg sm:flex ">
+          <div className=" w-full text-sm font-medium text-gray-900 bg-white rounded-lg sm:flex ">
             {options.map((option, index) => (
               <div
                 key={option.value}
@@ -36,7 +36,7 @@ const FormField = ({ label, type, id, name, autoComplete, options }) => {
                     id={option.id}
                     name={name}
                     type="checkbox"
-                    className="w-8 h-4 bg-gray-100 border-gray-300 rounded  dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 "
+                    className="w-8 h-4 bg-gray-100 border-gray-300 rounded dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 "
                   />
                   <label
                     htmlFor={option.id}

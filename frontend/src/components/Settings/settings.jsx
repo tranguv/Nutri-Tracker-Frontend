@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./settings.module.css"; // Import as a module
 import avatarImage from "./avatar.png";
 
 const Settingpg = () => {
@@ -17,6 +16,7 @@ const Settingpg = () => {
     { label: "168cm" },
     { label: "50kg" },
   ];
+  const avatarImageUrl = "https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png";
 
   return (
     <div className="flex flex-col items-center h-screen justify-center p-8">
@@ -25,7 +25,7 @@ const Settingpg = () => {
         {/* Avatar on the left */}
         <div className="mr-4 w-32 h-36 bg-violet-300 rounded-2xl overflow-hidden flex-shrink-0">
           <img
-            src={avatarImage}
+            src={avatarImageUrl}
             className="w-full h-full object-cover"
             alt="Avatar"
           />
