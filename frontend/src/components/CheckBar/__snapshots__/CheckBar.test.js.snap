@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the CheckBar component correctly 1`] = `
+<div
+  style={
+    {
+      "alignItems": "center",
+      "background": "white",
+      "borderRadius": "10px",
+      "color": "black",
+      "display": "flex",
+      "flexDirection": "row",
+      "fontSize": "1rem",
+      "gap": "10px",
+      "height": "40px",
+      "marginBottom": "10px",
+      "maxWidth": "300px",
+      "opacity": 1,
+      "padding": "10px",
+      "transition": "opacity 0.5s ease",
+    }
+  }
+>
+  <label
+    className="chakra-checkbox css-1elxtiq"
+    data-checked=""
+    onClick={[Function]}
+  >
+    <input
+      checked={true}
+      className="chakra-checkbox__input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      style={
+        {
+          "border": "0",
+          "clip": "rect(0, 0, 0, 0)",
+          "height": "1px",
+          "margin": "-1px",
+          "overflow": "hidden",
+          "padding": "0",
+          "position": "absolute",
+          "whiteSpace": "nowrap",
+          "width": "1px",
+        }
+      }
+      type="checkbox"
+    />
+    <span
+      aria-hidden={true}
+      className="chakra-checkbox__control css-dnty2r"
+      data-checked=""
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+    >
+      <div
+        className="css-0"
+        style={
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "height": "100%",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <svg
+          className="css-1w6vdd7"
+          style={
+            {
+              "fill": "none",
+              "stroke": "currentColor",
+              "strokeDasharray": 16,
+              "strokeWidth": 2,
+            }
+          }
+          viewBox="0 0 12 10"
+        >
+          <polyline
+            points="1.5 6 4.5 9 10.5 1"
+          />
+        </svg>
+      </div>
+    </span>
+  </label>
+  <div
+    style={
+      {
+        "textDecoration": null,
+      }
+    }
+  >
+    Plank
+  </div>
+  <div
+    style={
+      {
+        "background": "grey",
+        "height": "90%",
+        "width": "1px",
+      }
+    }
+  />
+  <div>
+     00:00 
+  </div>
+  <svg
+    fill="currentColor"
+    height="1em"
+    stroke="currentColor"
+    strokeWidth="0"
+    style={
+      {
+        "color": undefined,
+        "marginLeft": "auto",
+      }
+    }
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+    <path
+      d="M20 9H4v2h16V9zM4 15h16v-2H4v2z"
+    />
+  </svg>
+</div>
+`;

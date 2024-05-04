@@ -21,7 +21,7 @@ const DailyTask = () => {
           <h2>Daily Tasks</h2>
         </div>
       </div>
-      <div>
+
         <h2 className={styles["finish-task-header"]}>
           Finish Tasks To Earn Points
         </h2>
@@ -29,10 +29,9 @@ const DailyTask = () => {
           <TaskName currentTask={1} />
         </div>
         {taskName.map((task, index) => {
-          return <CheckBar tasks={task} />;
-        })}
+          return <CheckBar key={index} tasks={task} />;
+  })}
       </div>
-    </div>
   );
 };
 

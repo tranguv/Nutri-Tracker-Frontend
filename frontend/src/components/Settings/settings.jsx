@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./settings.module.css"; // Import as a module
+import styles from "./settings.module.css"; 
 
 const Settingpg = () => {
   const Edit = () => {

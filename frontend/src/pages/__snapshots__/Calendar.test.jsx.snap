@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calendar component renders correctly 1`] = `
+<div
+  className="m-2  mt-12 p-2  bg-white rounded-3xl"
+>
+  <MockedScheduleComponent
+    height="70vh"
+    selectedDate={2024-03-15T04:00:00.000Z}
+  >
+    <MockedInject
+      services={
+        [
+          "MockedDay",
+          "MockedWeek",
+          "MockedWorkWeek",
+          "MockedMonth",
+          "MockedAgenda",
+          "MockedResize",
+          "MockedDragAndDrop",
+        ]
+      }
+    />
+  </MockedScheduleComponent>
+</div>
+`;
