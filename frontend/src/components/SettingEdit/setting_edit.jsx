@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./setting_edit.module.css";
+import styles from "./Setting_edit.module.css";
 import FormField from "./formfield"; // Make sure to provide the correct path
 
 const EditSetting = () => {

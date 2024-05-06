@@ -1,9 +1,8 @@
 import React from "react";
-import styles from "./settings.module.css"; 
+import styles from "./Settings.module.css"; 
 
-const Settingpg = () => {
+const Settings = () => {
   const Edit = () => {
-    // navigate to the edit page;
     console.log("Edit button clicked");
   };
 
@@ -27,10 +26,10 @@ const Settingpg = () => {
       ))}
       {/* Edit button */}
       <div className={styles.EditButtonContainer}>
-        <button onClick={Edit}>Edit</button>
+        <button data-testid="Edit" onClick={Edit}>Edit</button>
       </div>
     </div>
   );
 };
 
-export default Settingpg;
+export default Settings;

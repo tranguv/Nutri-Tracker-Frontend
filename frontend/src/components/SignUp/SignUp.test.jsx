@@ -1,8 +1,7 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, act } from '@testing-library/react';
 import SignUp from './SignUp';
 import '@testing-library/jest-dom';
-
 
 window.alert = jest.fn();
 
@@ -22,13 +21,17 @@ describe('SignUp component', () => {
   test('submits form with correct values', () => {
     const { getByLabelText, getByText } = render(<SignUp />);
 
-    fireEvent.change(getByLabelText(/First Name/i), { target: { value: 'John' } });
-    fireEvent.change(getByLabelText(/Last Name/i), { target: { value: 'Doe' } });
-    fireEvent.change(getByLabelText(/Email/i), { target: { value: 'john.doe@example.com' } });
-    fireEvent.change(getByLabelText(/Password/i), { target: { value: 'password123' } });
-    fireEvent.change(getByLabelText(/Date of Birth/i), { target: { value: '1990-01-01' } });
-    fireEvent.change(getByLabelText(/Weight/i), { target: { value: '70' } });
-    fireEvent.change(getByLabelText(/Height/i), { target: { value: '180' } });
-    fireEvent.submit(getByText(/Submit/i));
+    act(() => {
+      fireEvent.change(getByLabelText(/First Name/i), { target: { value: 'John' } });
+      fireEvent.change(getByLabelText(/Last Name/i), { target: { value: 'Doe' } });
+      fireEvent.change(getByLabelText(/Email/i), { target: { value: 'john.doe@example.com' } });
+      fireEvent.change(getByLabelText(/Password/i), { target: { value: 'password123' } });
+      fireEvent.change(getByLabelText(/Weight/i), { target: { value: '70' } });
+      fireEvent.change(getByLabelText(/Height/i), { target: { value: '180' } });
+    });
+
+    act(() => {
+      fireEvent.submit(getByText(/Submit/i));
+    });
   });
 });
