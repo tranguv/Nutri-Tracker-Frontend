@@ -8,15 +8,17 @@ const EditSetting = () => {
     { id: "male", label: "Male", value: "male" },
     { id: "other", label: "Other", value: "other" },
   ];
-  const unitOptions = [
+  const unitLengthOptions = [
     { id: "cm", label: "Centimeters", value: "cm" },
     { id: "ft", label: "Feet", value: "ft" },
+  ];
+  const unitWeightOptions = [
     { id: "kg", label: "Kilograms", value: "kg" },
     { id: "lbs", label: "Pounds", value: "lbs" },
   ];
 
   return (
-    <div className={styles.container}>
+    <div className="flex justify-center align-middle">
       <form className={styles.form}>
         <FormField
           label="Full Name"
@@ -46,18 +48,43 @@ const EditSetting = () => {
           name="email"
           autoComplete="email"
         />
-        <FormField
-          label="Unit of Measurement"
-          type="checkbox"
-          name="unit"
-          options={unitOptions}
-        />
+        <div className="flex items-center">
+          <FormField
+            label="Height"
+            type="text"
+            id="height"
+            name="height"
+            placeholder="Enter your height"
+            className={styles.inputField}
+          />
+          <FormField
+            label="Unit of Length"
+            type="checkbox"
+            name="unitlength"
+            options={unitLengthOptions}
+          />
+        </div>
+        <div className="flex items-center">
+          <FormField
+            label="Weight"
+            type="text"
+            id="weight"
+            placeholder="Enter your weight"
+            className={styles.inputField}
+          />
+          <FormField
+            label="Unit of Weight"
+            type="checkbox"
+            name="unitWeight"
+            options={unitWeightOptions}
+          />
+        </div>
+        <div class=" h-50 w-22 flex justify-center">
+          <button class="  h-10 w-20 rounded-md border-1 bg-violet-300 font-medium">
+            Save
+          </button>
+        </div>
       </form>
-      <div class="static h-50 w-22">
-        <button class="absolute mr-10 mb-10 bottom-0 right-0 h-10 w-20 rounded-md border-1 bg-gray-100 font-medium">
-          Save
-        </button>
-      </div>
     </div>
   );
 };
