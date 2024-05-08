@@ -7,6 +7,7 @@ import LayoutWrapper from "../components/Main-Template/LayoutWrapper";
 import EditSetting from '../components/SettingEdit/setting_edit';
 import Settingpg from '../components/Settings/settings';
 import ProfilePage from '../components/profilePage/ProfilePage';
+import Dashboard from '../pages/Dashboard';
 
 const user = {
   name: "John Doe",
