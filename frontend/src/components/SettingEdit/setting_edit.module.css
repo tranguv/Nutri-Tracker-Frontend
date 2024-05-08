@@ -1,8 +1,4 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .input-field {
   width: 400px;
 }
