@@ -1,58 +1,22 @@
 import React from 'react';
-import {
-  FaBars,
-  FaUserAlt,
-  FaRegChartBar,
-  FaSignOutAlt,
-  FaRunning,
-  FaGamepad,
-  FaHome,
-} from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import { useStateContext } from '../../contexts/ContextProvider';
+import { menuItem } from '../../constants';
+
+// icons and image
+import { FaBars } from 'react-icons/fa';
+import nutritracker_logo from '../../assets/nutritracker_logo.png';
+
 //css
 import './Sidebar.modules.css';
 
 const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
-  const menuItem = [
-    {
-      path: '/dashboard',
-      name: 'Dashboard',
-      icon: <FaHome />,
-    },
-    {
-      path: '/reports',
-      name: 'Reports',
-      icon: <FaRegChartBar />,
-    },
-    {
-      path: '/logs',
-      name: 'Logs',
-      icon: <FaRunning />,
-    },
-    {
-      path: '/coinstore',
-      name: 'Coin Store',
-      icon: <FaGamepad />,
-    },
-    {
-      path: '/profile',
-      name: 'Profile',
-      icon: <FaUserAlt />,
-    },
-    {
-      path: '/logout',
-      name: 'Log Out',
-      icon: <FaSignOutAlt />,
-    },
-  ];
 
   return (
     <div
       className='container-sidebar'
       style={{
         position: 'fixed',
-        width: isSidebarCollapsed ? '10rem' : '4rem',
+        width: isSidebarCollapsed ? '11rem' : '4rem',
         height: '200vh',
         top: '0',
         zIndex: '100',
@@ -62,18 +26,18 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
       }}
     >
       <div className='top_section'>
-        <h1
-          style={{ display: isSidebarCollapsed ? 'block' : 'none' }}
-          className='logo'
-        >
-          Logo
-        </h1>
         <div
-          style={{ marginLeft: isSidebarCollapsed ? '50px' : '0px' }}
+          style={{ marginLeft: isSidebarCollapsed ? '80%' : '0px' }}
           className='bars'
         >
           <FaBars onClick={handleIconClick} />
         </div>
+        <h1
+          style={{ display: isSidebarCollapsed ? 'block' : 'none' }}
+          className='logo'
+        >
+          <img src={nutritracker_logo} width={500} height={500} />
+        </h1>
       </div>
       <div>
         {menuItem.map((item, index) => (
@@ -83,13 +47,13 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
             className='link'
             activeclassname='active'
           >
-            <div className='icon' style={{ color: 'black' }}>
+            <div className='icon' style={{ color: 'white' }}>
               {item.icon}
             </div>
             <div
               style={{
                 display: isSidebarCollapsed ? 'block' : 'none',
-                color: 'black',
+                color: 'white',
               }}
               className='link_text'
             >

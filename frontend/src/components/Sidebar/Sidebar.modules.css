@@ -9,38 +9,41 @@
   height: 100vh;
   width: 100%;
   max-width: 200px;
-  background:#9084D2;
-  color: black;
+  background: #9084d2;
+  color: rgb(255, 255, 255);
 }
 
 .top_section {
-  display: flex;
   align-items: center;
-  padding: 20px 15px;
-  padding-bottom: 40px;
+  padding: 15px 15px;
+  margin-bottom: 20px;
 }
 
 .logo {
-  font-size: 30px;
+  margin-right: auto;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .bars {
-  display: flex;
-  font-size: 25px;
-  margin-left: 50px;
+  font-size: 18px;
+  flex: 1;
+  margin-left: auto;
 }
 
 .link {
   display: flex;
   color: #fff;
-  padding: 10px 15px;
+  padding: 17px 15px;
   gap: 15px;
   transition: all 0.5s;
 }
 
 .link:hover {
-  background: rgb(75, 165, 116);
-  color: #000;
+  background: rgb(146, 83, 127);
+  color: #ffffff;
   transition: all 0.5s;
   border-radius: 10px;
 }
@@ -51,16 +54,16 @@
 }
 
 .active {
-  background: rgb(75, 165, 116);
-  color: #000;
+  background: rgb(126, 78, 120);
+  color: #ffffff;
   border-radius: 10px;
 }
 
 .icon {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .link_text {
-  font-size: 15px;
+  font-size: 13px;
+  color: #ffffff;
 }
-

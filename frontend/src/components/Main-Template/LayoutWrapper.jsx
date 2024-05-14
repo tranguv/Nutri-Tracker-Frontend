@@ -1,10 +1,7 @@
 import React from 'react';
-import { Box, Button, SimpleGrid } from '@chakra-ui/react';
 import Sidebar from '../Sidebar/Sidebar';
 import Navbar from '../Navbar/Navbar';
 import { useStateContext } from '../../contexts/ContextProvider';
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { FiSettings } from 'react-icons/fi';
 
 const LayoutWrapper = ({ children }) => {
   const { isSidebarCollapsed, setSidebarCollapsed } = useStateContext();
@@ -13,7 +10,7 @@ const LayoutWrapper = ({ children }) => {
     setSidebarCollapsed(!isSidebarCollapsed);
   };
 
-  const sidebarWidth = isSidebarCollapsed ? '10rem' : '4rem';
+  const sidebarWidth = isSidebarCollapsed ? '11rem' : '4rem';
 
   return (
     <div style={{ display: 'flex' }}>
@@ -41,12 +38,6 @@ const LayoutWrapper = ({ children }) => {
           </div>
         </div>
       </div>
-      <TooltipComponent
-        content='Settings Tooltip'
-        style={{ position: 'fixed', bottom: '20px', right: '20px' }}
-      >
-        <FiSettings size={30} />
-      </TooltipComponent>
     </div>
   );
 };
