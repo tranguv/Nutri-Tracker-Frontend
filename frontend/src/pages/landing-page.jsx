@@ -1,5 +1,3 @@
-
-
 import { AiFillApple } from "react-icons/ai";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -33,24 +31,24 @@ import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 
 
-const IMG_LIST= [
-  {img: img1, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-  {img: img2, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-  {img: img3, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-  {img: img4, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-  {img: img5, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-  {img: img6, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-  {img: img7, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-  {img: img8, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-  {img: img9, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+const IMG_LIST = [
+  { img: img1, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { img: img2, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { img: img3, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { img: img4, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { img: img5, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { img: img6, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { img: img7, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { img: img8, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+  { img: img9, title: 'Product Name', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
 ];
 const breakPoints = [
   { width: 1, itemsToShow: 2 },
   { width: 550, itemsToShow: 3 },
   { width: 768, itemsToShow: 4 },
-  { width:950, itemsToShow: 5 },
+  { width: 950, itemsToShow: 5 },
   { width: 1200, itemsToShow: 6 },
-]
+];
 function App() {
   return (
     <div className=''>
@@ -59,7 +57,7 @@ function App() {
           <div className='flex items-center space-x-4'>
             <AiFillApple className="text-[#4f46e5] h-8 w-8" />
             <span className='font-bold text-xl'>
-                NutriTracker©
+              NutriTracker©
             </span>
           </div>
           <div className='flex items-center space-x-4'>
@@ -86,15 +84,15 @@ function App() {
               needs.
             </h1>
             <p className='text-lg text-[#475569]'>
-                Using your BMI index we calculate whether the
-                <br />
-                dish is suitable for you.
+              Using your BMI index we calculate whether the
+              <br />
+              dish is suitable for you.
             </p>
             <div className='flex w-full max-w-md space-x-4'>
-                <TextField size='small' placeholder='Search your product'/>
-                <Button variant='contained' color='info' size='small'><SiGooglebigquery className='text-xl'/></Button>
-                <Button variant='contained' color='info' size='small'><MdKeyboardVoice className='text-xl'/></Button>
-                <Button variant='contained' color='info' size='small'><IoSettingsSharp className='text-xl'/></Button>
+              <TextField size='small' placeholder='Search your product' />
+              <Button variant='contained' color='info' size='small'><SiGooglebigquery className='text-xl' /></Button>
+              <Button variant='contained' color='info' size='small'><MdKeyboardVoice className='text-xl' /></Button>
+              <Button variant='contained' color='info' size='small'><IoSettingsSharp className='text-xl' /></Button>
             </div>
           </div>
         </div>
@@ -104,101 +102,101 @@ function App() {
         <div className='container mx-auto'>
           <h2 className='text-2xl font-bold'>Feauture We Provided</h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4'>
-          
-          <Card variant='outline' >
-            <CardContent>
+
+            <Card variant='outline' >
+              <CardContent>
                 <span className='flex'>
                   <h3 className='text-2xl font-bold'>Calculate BMI is easier</h3>
-                  <img src={bmi} style={{width:"50px", height:"50px"}}></img>
+                  <img src={bmi} style={{ width: "50px", height: "50px" }}></img>
                 </span>
                 <p>We calculate your BMI index from data like age, height, weight.</p>
-            </CardContent>
-          </Card>
-          <Card variant='outline ' >
-            <CardContent>
-              <img src={dish}  style={{width:"50px", height:"50px"}}></img>
-              <h3 className='text-xl font-bold'>Calculating BMI is easier</h3>
-              <p>We calculate your BMI index from data like age, height, weight.</p>
-            </CardContent>
-          </Card>
-          <Card variant='outline'>
-            <CardContent>
-              <img src={statistic}  style={{width:"50px", height:"50px"}}></img>
-              <h3 className='text-xl font-bold'>Calculating BMI is easier</h3>
-              <p>We calculate your BMI index from data like age, height, weight.</p>
-            </CardContent>
-          </Card>
-          <Card variant='outline'>
-            <CardContent>
-              <img src={chatbot}  style={{width:"50px", height:"50px"}}></img>
-              <h3 className='text-xl font-bold'>Calculating BMI is easier</h3>
-              <p>We calculate your BMI index from data like age, height, weight.</p>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+            <Card variant='outline ' >
+              <CardContent>
+                <img src={dish} style={{ width: "50px", height: "50px" }}></img>
+                <h3 className='text-xl font-bold'>Calculating BMI is easier</h3>
+                <p>We calculate your BMI index from data like age, height, weight.</p>
+              </CardContent>
+            </Card>
+            <Card variant='outline'>
+              <CardContent>
+                <img src={statistic} style={{ width: "50px", height: "50px" }}></img>
+                <h3 className='text-xl font-bold'>Calculating BMI is easier</h3>
+                <p>We calculate your BMI index from data like age, height, weight.</p>
+              </CardContent>
+            </Card>
+            <Card variant='outline'>
+              <CardContent>
+                <img src={chatbot} style={{ width: "50px", height: "50px" }}></img>
+                <h3 className='text-xl font-bold'>Calculating BMI is easier</h3>
+                <p>We calculate your BMI index from data like age, height, weight.</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-        </div>
-        
+
       </section>
 
       <section className='py-8'>
         <div className='container mx-auto'>
           <h2 className='text-2xl font-bold'>Related Topics</h2>
           <Carousal breakPoints={breakPoints} className='mt-4' showArrows={false}>
-              {IMG_LIST.map((item, index) => (
-                <div>
-                  <Card key={index} variant='outline' >
-                    <CardContent >
-                      <img src={item.img} className='object-fill h-48 w-96 rounded-lg'></img>
-                      <h3 className='text-xl font-bold'>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
+            {IMG_LIST.map((item, index) => (
+              <div>
+                <Card key={index} variant='outline' >
+                  <CardContent >
+                    <img src={item.img} className='object-fill h-48 w-96 rounded-lg'></img>
+                    <h3 className='text-xl font-bold'>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
           </Carousal>
 
           <Carousal breakPoints={breakPoints} className='mt-4' showArrows={false}>
-              {IMG_LIST.map((item, index) => (
-                <div>
-                  <Card key={index} sx={{ maxWidth: 345 }}>
-                    <CardContent>
-                      <img src={item.img} className='object-fill h-48 w-96 rounded-lg'></img>
-                      <h3 className='text-xl font-bold'>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
+            {IMG_LIST.map((item, index) => (
+              <div>
+                <Card key={index} sx={{ maxWidth: 345 }}>
+                  <CardContent>
+                    <img src={item.img} className='object-fill h-48 w-96 rounded-lg'></img>
+                    <h3 className='text-xl font-bold'>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
           </Carousal>
         </div>
       </section>
-      
+
 
       <footer className='bg-[#f7f7f7] py-6'>
         <div className='flex p-4 justify-between items-center'>
-            <div className='flex flex-col'>
-              <h3 className='font-bold text-xl'>NutriTracker©</h3>
-              <p>© 2021 NutriTracker. All rights reserved.</p>
-            </div>
-            
-            <div>
-              <ul className='flex space-x-4'>
-                <li className='text-[#4f46e5]'>Home</li>
-                <li className='text-[#4f46e5]'>About</li>
-                <li className='text-[#4f46e5]'>Contact</li>
-              </ul>
-            </div>
+          <div className='flex flex-col'>
+            <h3 className='font-bold text-xl'>NutriTracker©</h3>
+            <p>© 2021 NutriTracker. All rights reserved.</p>
+          </div>
 
-            <div>
-              <ul className='flex space-x-4'>
-                <li className='text-[#4f46e5]'><TiSocialFacebookCircular  className='text-3xl'/></li>
-                <li className='text-[#4f46e5]'><FaInstagram  className='text-3xl'/></li>
-                <li className='text-[#4f46e5]'><CiLinkedin  className='text-3xl'/></li>
-              </ul>
-            </div>
-            
+          <div>
+            <ul className='flex space-x-4'>
+              <li className='text-[#4f46e5]'>Home</li>
+              <li className='text-[#4f46e5]'>About</li>
+              <li className='text-[#4f46e5]'>Contact</li>
+            </ul>
+          </div>
+
+          <div>
+            <ul className='flex space-x-4'>
+              <li className='text-[#4f46e5]'><TiSocialFacebookCircular className='text-3xl' /></li>
+              <li className='text-[#4f46e5]'><FaInstagram className='text-3xl' /></li>
+              <li className='text-[#4f46e5]'><CiLinkedin className='text-3xl' /></li>
+            </ul>
+          </div>
+
         </div>
-        
+
       </footer>
     </div>
   );

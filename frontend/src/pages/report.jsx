@@ -44,7 +44,7 @@ const Report = () => {
       </div>
       <div className="grid grid-cols-3	mt-5  ">
         <div>
-          
+
         </div>
         <div></div>
         <div></div>

@@ -4,7 +4,6 @@ import { Card, CardHeader, Progress } from "@chakra-ui/react";
 import avatar from "../assets/data/ANIMEava.png";
 import Process from "../components/process-component/Process";
 import progressPic from "./image.png";
-import { PieChart } from "@mui/x-charts/PieChart";
 import DailyTask from "../components/Daily Task/DailyTask";
 
 const Dashboard = () => {
