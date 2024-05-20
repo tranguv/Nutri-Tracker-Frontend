@@ -10,7 +10,7 @@ const LayoutWrapper = ({ children }) => {
     setSidebarCollapsed(!isSidebarCollapsed);
   };
 
-  const sidebarWidth = isSidebarCollapsed ? '11rem' : '4rem';
+  const sidebarWidth = isSidebarCollapsed ? '180px' : '60px';
 
   return (
     <div style={{ display: 'flex' }}>

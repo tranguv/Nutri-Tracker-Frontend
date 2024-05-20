@@ -3,6 +3,7 @@ ARG NODE_VERSION=21.5.0
 FROM node:${NODE_VERSION}-alpine
 
 RUN addgroup app && adduser -S -G app app
+
 USER app
 
 WORKDIR /app 

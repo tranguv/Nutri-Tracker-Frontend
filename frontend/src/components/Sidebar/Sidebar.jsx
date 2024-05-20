@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { menuItem } from '../../constants';
+import { menuItem } from '../../constants/SideBarMenuItem';
 
 // icons and image
 import { FaBars } from 'react-icons/fa';
@@ -16,7 +16,7 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
       className='container-sidebar'
       style={{
         position: 'fixed',
-        width: isSidebarCollapsed ? '11rem' : '4rem',
+        width: isSidebarCollapsed ? '180px' : '70px',
         height: '200vh',
         top: '0',
         zIndex: '100',
@@ -28,7 +28,7 @@ const Sidebar = ({ isSidebarCollapsed, handleIconClick }) => {
       <div className='top_section'>
         <div
           style={{ marginLeft: isSidebarCollapsed ? '80%' : '0px' }}
-          className='bars'
+          className='flex-1 ml-auto size-4'
         >
           <FaBars onClick={handleIconClick} />
         </div>
