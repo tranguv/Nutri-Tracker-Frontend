@@ -2,17 +2,9 @@ import SignIn from '../components/SignIn/SignIn';
 import SignUp from '../components/SignUp/SignUp';
 import Dasboard from '../pages/Dashboard';
 import AuthForm from '../components/Main-Template/main-template';
-import LayoutWrapper from "../components/Main-Template/LayoutWrapper";
-
 import EditSetting from '../components/SettingEdit/setting_edit';
 import Settingpg from '../components/Settings/settings';
 import ProfilePage from '../components/profilePage/ProfilePage';
-
-const user = {
-  name: "John Doe",
-  email: "johndoe@gmail.com",
-  date: "9-11-2001",
-};
 
 export const navigation = [
   {
@@ -46,10 +38,9 @@ export const navigation = [
     noLayoutWrap: false,
     isPrivate: true,
   },
-
   {
     path: "/profilePage",
-    component: <ProfilePage user={user} />,
+    component: <ProfilePage />,
     noLayoutWrap: false,
     isPrivate: true,
   },

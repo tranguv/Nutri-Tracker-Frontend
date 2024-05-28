@@ -18,6 +18,10 @@ export default defineConfig({
     },
     react(),
   ],
+  server: {
+    host: true,
+    port: 5173,
+  },
   build: {
     rollupOptions: {
       external: ["@chakra-ui/react", "formik"],

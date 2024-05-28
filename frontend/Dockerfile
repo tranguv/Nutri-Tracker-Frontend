@@ -3,12 +3,18 @@ ARG NODE_VERSION=21.5.0
 FROM node:${NODE_VERSION}-alpine
 
 RUN addgroup app && adduser -S -G app app
+
 USER app
 
 WORKDIR /app 
+
 COPY --chown=app:app package*.json ./
-RUN npm install 
+
+RUN npm install
+
 COPY . .
+
+RUN npm run build
 
 EXPOSE 5173 
 

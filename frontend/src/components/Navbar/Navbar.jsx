@@ -3,7 +3,7 @@ import { TbBell } from 'react-icons/tb';
 
 const Navbar = () => {
   return (
-    <nav className='top-0 absolute bg-white w-[calc(100%-7rem)] ml-5 '>
+    <nav className='py-2 px-10'>
       <div className='flex flex-wrap justify-between items-center p-2'>
         <div className='pt-1'>
           <p className='text-3xl font-bold text-gray-700'>Hi, Gia Bao</p>
