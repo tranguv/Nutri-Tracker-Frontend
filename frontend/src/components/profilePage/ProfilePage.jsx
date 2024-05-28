@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Badge from '../badge/Badge';
 
-const ProfilePage = ({ user }) => {
-  const { name, email, date } = user;
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+const PORT = import.meta.env.VITE_PORT;
+
+const ProfilePage = () => {
+  const [user, setUser] = useState(null);
   const [profileImage, setProfileImage] = useState(null); // State to store the profile picture
 
   // Function to handle file upload
@@ -12,6 +15,33 @@ const ProfilePage = ({ user }) => {
       setProfileImage(file);
     }
   };
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await fetch(`http://${SERVER_URL}:${PORT}/user-profile`, {
+          method: 'get',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          }
+        });
+        const userData = await response.json(); // Correctly await the JSON parsing
+
+        if (!userData || userData.length === 0) {
+          console.log("No such user");
+        } else {
+          setUser(userData[0]); // Assuming the first user is the one you want
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchUser();
+  });
+
+  console.log("user", user);
 
   return (
     <div className="flex justify-center items-center h-screen">
@@ -36,9 +66,9 @@ const ProfilePage = ({ user }) => {
             </div>
             <div>
               {/* Profile information */}
-              <h2 className="text-4xl font-semibold">{name}</h2>
-              <p className="text-gray-600 text-lg">{email}</p>
-              <p className="text-gray-600 text-lg">Joined: {date}</p>
+              <h2 className="text-4xl font-semibold">{user?.name}</h2>
+              <p className="text-gray-600 text-lg">{user?.email}</p>
+              <p className="text-gray-600 text-lg">Joined: </p>
               {/* Profile picture upload */}
               <input
                 id="profilePicInput"

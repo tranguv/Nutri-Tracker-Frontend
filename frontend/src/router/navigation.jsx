@@ -6,12 +6,6 @@ import EditSetting from '../components/SettingEdit/setting_edit';
 import Settingpg from '../components/Settings/settings';
 import ProfilePage from '../components/profilePage/ProfilePage';
 
-const user = {
-  name: "John Doe",
-  email: "johndoe@gmail.com",
-  date: "9-11-2001",
-};
-
 export const navigation = [
   {
     path: "/", // sign up page
@@ -46,7 +40,7 @@ export const navigation = [
   },
   {
     path: "/profilePage",
-    component: <ProfilePage user={user} />,
+    component: <ProfilePage />,
     noLayoutWrap: false,
     isPrivate: true,
   },
